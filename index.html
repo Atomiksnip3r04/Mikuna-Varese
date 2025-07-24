@@ -6,7 +6,7 @@
     
     <!-- SEO Meta Tags -->
     <title>Ristorante Peruviano Mikuna a Varese | Cucina Autentica</title>
-    <meta name="description" content="Mikuna, ristorante peruviano a Varese: cucina autentica, menù tipico, prenotazioni online. Scopri Mikuna Varese!">
+    <meta name="description" content="Mikuna è il ristorante peruviano a Varese dove gustare ceviche, lomo saltado e specialità tipiche. Prenota online, scopri il menù autentico e vivi l’esperienza Mikuna a Varese!">
     <meta name="keywords" content="ristorante peruviano Varese, Mikuna, cucina peruviana, menù peruviano, prenotazione ristorante Varese">
     <meta name="author" content="Mikuna Ristorante">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -188,7 +188,7 @@
     </script>
     
     <!-- Favicons -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/webp" href="loghi/chi_siamo-400.webp">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -213,6 +213,8 @@
     <link rel="alternate" hreflang="es" href="https://mikuna-varese.it/?lang=es">
     <link rel="alternate" hreflang="en" href="https://mikuna-varese.it/?lang=en">
     <link rel="alternate" hreflang="x-default" href="https://mikuna-varese.it/">
+    <link rel="preload" href="style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="style.min.css"></noscript>
 </head>
 <body>
     <!-- Skip to Content for Accessibility -->
@@ -435,10 +437,7 @@
                         <a href="chi-siamo.html" class="btn btn-outline" data-key="about-preview-btn" itemprop="url">Scopri di più su Mikuna</a>
                     </div>
                     <div class="about-image">
-                        <img src="loghi/chi_siamo.webp" 
-                             alt="La famiglia Mikuna - La nostra storia dal Perù a Varese" 
-                             itemprop="image"
-                             loading="lazy">
+                        <img src="loghi/chi_siamo-400.webp" srcset="loghi/chi_siamo-400.webp 400w, loghi/chi_siamo-800.webp 800w" sizes="(max-width: 600px) 100vw, 400px" alt="La famiglia Mikuna - La nostra storia dal Perù a Varese" itemprop="image" loading="lazy">
                         <div class="image-caption">
                             <p>La nostra famiglia: un viaggio dal Perù a Varese</p>
                         </div>
@@ -651,6 +650,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html> 
