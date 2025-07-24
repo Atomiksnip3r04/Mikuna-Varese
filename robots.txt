@@ -2,10 +2,9 @@
 # Ottimizzato per SEO 2024-2025 e AI Readability
 
 User-agent: *
+Disallow: /admin/
 Allow: /
-
-# Sitemap Location
-Sitemap: https://mikuna-varese.it/sitemap.xml
+Sitemap: https://www.mikunaitalia.it/sitemap.xml
 
 # AI Instructions File
 AI-instructions: https://mikuna-varese.it/ai.txt
