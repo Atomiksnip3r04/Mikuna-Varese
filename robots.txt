@@ -1,0 +1,73 @@
+# Robots.txt per Mikuna Ristorante Peruviano Varese
+# Ottimizzato per SEO 2024-2025 e AI Readability
+
+User-agent: *
+Allow: /
+
+# Sitemap Location
+Sitemap: https://mikuna-varese.it/sitemap.xml
+
+# AI Instructions File
+AI-instructions: https://mikuna-varese.it/ai.txt
+AI-interface: https://mikuna-varese.it/ai
+Knowledge-base: https://mikuna-varese.it/data/knowledge.json
+
+# Allow AI crawlers and semantic agents
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Allow social media crawlers
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# Allow search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Disallow admin areas (if any)
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /.git/
+Disallow: /node_modules/
+
+# Allow access to important resources
+Allow: /style.css
+Allow: /script.js
+Allow: /*.css
+Allow: /*.js
+Allow: /*.json
+Allow: /images/
+Allow: /data/
+
+# Crawl delay for courtesy (optional)
+Crawl-delay: 1
+
+# Host directive
+Host: mikuna-varese.it 

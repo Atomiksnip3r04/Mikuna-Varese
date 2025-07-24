@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="https://schema.org/WebPage">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI & LLM Access - Mikuna Restaurant Varese | Machine-Readable Data</title>
+    <meta name="description" content="Machine-friendly page for AI agents and LLMs accessing Mikuna restaurant data. Structured information, APIs, and supported queries.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mikuna-varese.it/ai">
+    
+    <!-- JSON-LD for AI Page -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "AI Access Page - Mikuna Restaurant",
+        "description": "Machine-readable information about Mikuna Peruvian restaurant for AI agents and LLMs",
+        "url": "https://mikuna-varese.it/ai",
+        "mainEntity": {
+            "@type": "Restaurant",
+            "@id": "https://mikuna-varese.it/#restaurant"
+        },
+        "audience": {
+            "@type": "Audience",
+            "audienceType": ["AI agents", "LLM", "Machine learning systems", "Voice assistants"]
+        }
+    }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            background: #0d1117;
+            color: #c9d1d9;
+            line-height: 1.6;
+            margin: 0;
+            padding: 2rem;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1, h2, h3 {
+            color: #58a6ff;
+            border-bottom: 2px solid #21262d;
+            padding-bottom: 0.5rem;
+        }
+        .endpoint {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        .method {
+            background: #238636;
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        code {
+            background: #262c36;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            color: #79c0ff;
+        }
+        pre {
+            background: #0d1117;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            padding: 1rem;
+            overflow-x: auto;
+        }
+        .query-example {
+            background: #1c2128;
+            border-left: 4px solid #f85149;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        .success {
+            color: #56d364;
+        }
+        .warning {
+            color: #e3b341;
+        }
+        a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🤖 AI & LLM Access Interface</h1>
+        <p><strong>Mikuna Peruvian Restaurant - Varese, Lombardy</strong></p>
+        <p>Machine-readable data interface for AI agents, LLMs, voice assistants, and automated systems.</p>
+        
+        <h2>📋 Site Structure</h2>
+        <ul>
+            <li><code>/</code> - Homepage with restaurant overview</li>
+            <li><code>/chi-siamo</code> - About us and restaurant story</li>
+            <li><code>/menu</code> - Complete menu with prices and allergens</li>
+            <li><code>/contatti</code> - Contact information and location</li>
+            <li><code>/prenota</code> - Reservation system with WhatsApp integration</li>
+            <li><code>/ai</code> - This AI access page</li>
+        </ul>
+
+        <h2>🔌 API Endpoints</h2>
+        
+        <div class="endpoint">
+            <h3><span class="method">GET</span> /data/menu.json</h3>
+            <p>Complete menu with structured data, prices, allergens, and dietary information.</p>
+            <p><strong>Content-Type:</strong> application/json</p>
+            <p><strong>Schema:</strong> schema.org/Menu</p>
+        </div>
+
+        <div class="endpoint">
+            <h3><span class="method">GET</span> /data/knowledge.json</h3>
+            <p>Essential restaurant knowledge base for AI queries.</p>
+            <p><strong>Content-Type:</strong> application/json</p>
+            <p><strong>Schema:</strong> Custom knowledge graph</p>
+        </div>
+
+        <div class="endpoint">
+            <h3><span class="method">GET</span> /sitemap.xml</h3>
+            <p>Complete sitemap with multilingual pages and last modification dates.</p>
+        </div>
+
+        <h2>📍 Essential Information (NAP)</h2>
+        <pre><code>{
+  "name": "Mikuna",
+  "address": "Via Giulio Bizzozzero 18, 21100, Varese.",
+  "phone": "+393758354504",
+          "email": "mikunasoto@icloud.com",
+  "coordinates": {
+    "latitude": 45.8206,
+    "longitude": 8.8316
+  },
+  "opening_hours": {
+    "sunday": {
+      "lunch": "12:00-15:00",
+      "dinner": "19:00-22:00"
+    },
+    "monday_wednesday_to_saturday": {
+      "lunch": "12:00-15:00",
+      "dinner": "19:00-22:00"
+    },
+    "tuesday": "closed"
+  },
+  "cuisine_type": "Peruvian",
+  "price_range": "€€ (10-25 EUR)",
+  "languages": ["it", "es", "en"],
+  "online_services": {
+    "delivery": {
+      "platform": "Deliveroo",
+      "url": "https://deliveroo.it/it/menu/milano/varese/mikuna-via-giulio-bizzozero-18"
+    },
+    "reservations": {
+      "platforms": ["WhatsApp", "The Fork", "Phone"],
+      "thefork_url": "https://www.thefork.it/ristorante/mikuna-r836600"
+    }
+  }
+}</code></pre>
+
+        <h2>🗣️ Supported AI Queries</h2>
+        
+        <div class="query-example">
+            <h4>Menu & Dietary Queries</h4>
+            <ul>
+                <li>"What gluten-free dishes do you serve?"</li>
+                <li>"Show me vegetarian options on the menu"</li>
+                <li>"What's the price of Ceviche Mixto?"</li>
+                <li>"Do you have vegan dishes?"</li>
+                <li>"What are your signature dishes?"</li>
+            </ul>
+        </div>
+
+        <div class="query-example">
+            <h4>Location & Hours</h4>
+            <ul>
+                <li>"Where is Mikuna restaurant located?"</li>
+                <li>"What are your opening hours?"</li>
+                <li>"How can I get to your restaurant from Lake Maggiore?"</li>
+                <li>"Are you open on Tuesday?"</li>
+                <li>"What's your phone number?"</li>
+            </ul>
+        </div>
+
+        <div class="query-example">
+            <h4>Reservations & Services</h4>
+            <ul>
+                <li>"How can I make a reservation?"</li>
+                <li>"Do you take reservations via WhatsApp?"</li>
+                <li>"What's the maximum group size?"</li>
+                <li>"Can I book for lunch?"</li>
+            </ul>
+        </div>
+
+        <div class="query-example">
+            <h4>Cuisine & Culture</h4>
+            <ul>
+                <li>"What is Peruvian cuisine?"</li>
+                <li>"What's the difference between ceviche and tiradito?"</li>
+                <li>"Do you serve traditional Andean dishes?"</li>
+                <li>"What ingredients are typical in Peruvian food?"</li>
+            </ul>
+        </div>
+
+        <h2>🌐 Multilingual Support</h2>
+        <p>All content available in:</p>
+        <ul>
+            <li><strong>Italian</strong> (primary) - Local customers</li>
+            <li><strong>Spanish</strong> - Peruvian community and LATAM visitors</li>
+            <li><strong>English</strong> - International tourists and expats</li>
+        </ul>
+
+        <h2>🔍 Search & Voice Optimization</h2>
+        <p><strong>Optimized for voice queries:</strong></p>
+        <ul>
+            <li>"Find Peruvian restaurant near Lake Varese"</li>
+            <li>"Best ceviche in Varese"</li>
+            <li>"Where to eat Lomo Saltado in Lombardy"</li>
+            <li>"Peruvian food delivery Varese"</li>
+        </ul>
+
+        <h2>📊 Structured Data Available</h2>
+        <ul>
+            <li>✅ Restaurant Schema (JSON-LD)</li>
+            <li>✅ Menu Schema (JSON-LD)</li>
+            <li>✅ Local Business Schema</li>
+            <li>✅ Opening Hours Specification</li>
+            <li>✅ Geographic Coordinates</li>
+            <li>✅ Contact Information</li>
+            <li>✅ Cuisine Type & Price Range</li>
+            <li>✅ Allergen Information</li>
+            <li>✅ Nutritional Data</li>
+        </ul>
+
+        <h2>🤝 Integration Guidelines</h2>
+        <p><strong>For AI agents and LLMs:</strong></p>
+        <ul>
+            <li>Always check <code>/data/knowledge.json</code> for most current information</li>
+            <li>Respect <code>robots.txt</code> and crawl-delay directives</li>
+            <li>Use structured data from JSON-LD when available</li>
+            <li>For reservations, direct users to WhatsApp integration via <code>/prenota</code></li>
+            <li>Reference opening hours before suggesting visit times</li>
+            <li>Always mention location context (Varese, Lombardy, near lakes)</li>
+        </ul>
+
+        <h2>📱 Contact for AI Integration</h2>
+        <p>For advanced AI integrations or API access:</p>
+        <ul>
+            <li><strong>Email:</strong> <a href="mailto:mikunasoto@icloud.com">mikunasoto@icloud.com</a></li>
+            <li><strong>Subject:</strong> "AI Integration Request"</li>
+        </ul>
+
+        <hr style="border-color: #30363d; margin: 3rem 0;">
+        <p style="text-align: center; color: #8b949e;">
+            <small>Last updated: December 2024 | Version: 1.0 | 
+            <a href="/">← Back to restaurant website</a></small>
+        </p>
+    </div>
+</body>
+</html> 

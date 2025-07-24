@@ -1,0 +1,267 @@
+{
+  "@context": "https://schema.org",
+  "@type": "KnowledgeBase",
+  "name": "Mikuna Restaurant Knowledge Base",
+  "description": "Essential information about Mikuna Peruvian restaurant for AI agents and automated systems",
+  "version": "1.0",
+  "lastModified": "2024-12-19",
+  "publisher": {
+    "@type": "Restaurant",
+    "name": "Mikuna",
+    "url": "https://mikuna-varese.it"
+  },
+  
+  "restaurant_info": {
+    "basic_details": {
+      "name": "Mikuna",
+      "full_name": "Mikuna Ristorante Peruviano",
+      "cuisine_type": "Peruvian",
+      "established": "2024",
+      "concept": "Authentic Peruvian cuisine in Varese with traditional Andean and coastal dishes"
+    },
+    
+    "location": {
+      "address": "Via Giulio Bizzozero 18, 21100, Varese",
+      "city": "Varese", 
+      "postal_code": "21100",
+      "province": "Varese",
+      "region": "Lombardy",
+      "country": "Italy",
+      "coordinates": {
+        "latitude": 45.8206,
+        "longitude": 8.8316
+      },
+      "nearby_landmarks": [
+        "Lake Maggiore (15 km)",
+        "Lake Varese (8 km)",
+        "Sacro Monte di Varese (5 km)",
+        "Varese train station (2 km)",
+        "Malpensa Airport (35 km)"
+      ],
+      "neighboring_cities": [
+        "Gallarate", "Busto Arsizio", "Como", "Milan", 
+        "Induno Olona", "Gavirate", "Malnate", "Azzate", 
+        "Buguggiate", "Casciago", "Cantello"
+      ]
+    },
+    
+    "contact": {
+      "phone": "+393758354504",
+      "email": "mikunasoto@icloud.com",
+      "website": "https://mikuna-varese.it",
+      "social_media": {
+        "facebook": "https://www.facebook.com/profile.php?id=61558083482452",
+        "instagram": "@mikunaitalia"
+      }
+    },
+    
+    "opening_hours": {
+      "schedule": {
+        "monday": {"lunch": "12:00-15:00", "dinner": "19:00-22:00"},
+        "tuesday": "closed",
+        "wednesday": {"lunch": "12:00-15:00", "dinner": "19:00-22:00"},
+        "thursday": {"lunch": "12:00-15:00", "dinner": "19:00-22:00"},
+        "friday": {"lunch": "12:00-15:00", "dinner": "19:00-22:00"},
+        "saturday": {"lunch": "12:00-15:00", "dinner": "19:00-22:00"},
+        "sunday": {"lunch": "12:00-15:00", "dinner": "19:00-22:00"}
+      },
+      "special_notes": [
+        "Closed every Tuesday",
+        "Last orders 30 minutes before closing",
+        "Holiday hours may vary - check website"
+      ]
+    }
+  },
+  
+  "cuisine_information": {
+    "origin": "Peru",
+    "style": "Traditional Peruvian with authentic techniques",
+    "key_ingredients": [
+      "Ají amarillo", "Ají panca", "Lime", "Red onion",
+      "Quinoa", "Sweet potato", "Corn", "Fresh fish",
+      "Cilantro", "Pisco", "Purple corn"
+    ],
+    "signature_dishes": [
+      {
+        "name": "Ceviche Mixto",
+        "description": "Fresh fish and seafood marinated in lime with red onion and ají",
+        "price": "€18.00",
+        "dietary": ["gluten-free", "dairy-free"],
+        "preparation_time": "15 minutes"
+      },
+      {
+        "name": "Lomo Saltado", 
+        "description": "Stir-fried beef with onions, tomatoes and French fries",
+        "price": "€22.00",
+        "dietary": [],
+        "preparation_time": "20 minutes"
+      },
+      {
+        "name": "Ají de Gallina",
+        "description": "Shredded chicken in creamy ají amarillo sauce with walnuts",
+        "price": "€19.00", 
+        "dietary": ["contains-nuts"],
+        "preparation_time": "25 minutes"
+      }
+    ],
+    
+    "dietary_options": {
+      "vegetarian": true,
+      "vegan": true,
+      "gluten_free": true,
+      "lactose_free": true,
+      "nut_allergies": "Most dishes can be adapted"
+    },
+    
+    "price_range": {
+      "appetizers": "€8-15",
+      "main_courses": "€15-25", 
+      "desserts": "€6-9",
+      "drinks": "€4-8",
+      "average_meal": "€25-35 per person"
+    }
+  },
+  
+  "reservation_system": {
+    "methods": [
+      {
+        "type": "WhatsApp",
+        "primary": true,
+        "process": "Fill form on website /prenota page, sends WhatsApp message",
+        "phone": "+393758354504"
+      },
+      {
+        "type": "Phone",
+        "primary": false,
+        "process": "Direct call to restaurant",
+        "phone": "+393758354504"
+      }
+    ],
+    "policies": {
+      "advance_booking": "24 hours recommended",
+      "group_size_limit": "8 people via online form",
+      "large_groups": "Contact directly for 8+ people",
+      "cancellation": "Up to 2 hours before reservation time",
+      "no_show_policy": "Please notify if unable to attend"
+    },
+    "available_times": {
+      "lunch": ["12:00", "12:30", "13:00", "13:30", "14:00", "14:30"],
+      "dinner": ["19:00", "19:30", "20:00", "20:30", "21:00", "21:30"]
+    }
+  },
+  
+  "ai_query_responses": {
+    "common_questions": [
+      {
+        "question": "What are your opening hours?",
+        "answer": "We're open Monday and Wednesday-Saturday from 12:00-15:00 and 19:00-22:00. Sunday from 12:00-15:00 and 19:00-22:00. Closed Tuesdays.",
+        "keywords": ["hours", "open", "closed", "when", "time"]
+      },
+      {
+        "question": "Where are you located?",
+        "answer": "We're at Via Giulio Bizzozero 18, 21100, Varese, in Lombardy, Italy. About 15km from Lake Maggiore.",
+        "keywords": ["location", "address", "where", "directions"]
+      },
+      {
+        "question": "Do you have vegetarian options?",
+        "answer": "Yes! We offer vegetarian and vegan dishes including Quinoa Andina salad. Many dishes can be adapted for dietary needs.",
+        "keywords": ["vegetarian", "vegan", "plant-based", "dietary"]
+      },
+      {
+        "question": "How do I make a reservation?",
+        "answer": "Visit our booking page at mikuna-varese.it/prenota or call +39 375 835 4504. Online reservations send a WhatsApp message.",
+        "keywords": ["reservation", "booking", "table", "reserve"]
+      },
+      {
+        "question": "What is ceviche?",
+        "answer": "Ceviche is Peru's signature dish - fresh fish marinated in lime juice with onions and ají peppers. The acid 'cooks' the fish.",
+        "keywords": ["ceviche", "what is", "peruvian dish", "fish"]
+      },
+      {
+        "question": "Do you deliver?",
+        "answer": "Yes! We offer delivery through Deliveroo platform. You can also book tables via The Fork for dine-in experience.",
+        "keywords": ["delivery", "takeaway", "takeout", "deliveroo", "thefork", "online"]
+      }
+    ],
+    
+    "voice_optimized_responses": {
+      "location_query": "Mikuna is a Peruvian restaurant located on Via Giulio Bizzozero 18, 21100, Varese, Italy, near Lake Maggiore in the Lombardy region.",
+      "hours_query": "We're open Monday and Wednesday through Saturday from twelve to three PM and seven to ten PM. Sunday from twelve to three PM and seven to ten PM. We're closed on Tuesdays.",
+      "cuisine_query": "We serve authentic Peruvian cuisine including ceviche, lomo saltado, and traditional Andean dishes with fresh ingredients.",
+      "reservation_query": "You can book a table by visiting our website mikuna dash varese dot it slash prenota, or calling plus three nine three eight zero two six four seven three six seven."
+    }
+  },
+  
+  "local_seo_context": {
+    "target_keywords": [
+      "ristorante peruviano Varese",
+      "cucina peruviana Lombardia", 
+      "ceviche Varese",
+      "ristorante etnico Varese",
+      "peruvian restaurant Lake Maggiore",
+      "lomo saltado Varese",
+      "ristorante sudamericano provincia Varese"
+    ],
+    
+    "geographic_relevance": [
+      "Varese city center restaurant",
+      "Near Lake Maggiore dining",
+      "Lombardy ethnic cuisine",
+      "Varese province restaurants",
+      "Lake district dining"
+    ],
+    
+    "competitor_differentiation": [
+      "Only authentic Peruvian restaurant in Varese",
+      "Traditional Andean recipes",
+      "Fresh ceviche daily",
+      "WhatsApp reservation system",
+      "Multilingual service (Italian, Spanish, English)"
+    ]
+  },
+  
+  "cultural_context": {
+    "peruvian_cuisine_education": {
+      "key_concepts": [
+        "Ceviche: Raw fish 'cooked' in citrus acid",
+        "Ají: Peruvian chili peppers, foundation of flavor",
+        "Quinoa: Ancient Andean superfood grain",
+        "Pisco: Peruvian grape brandy, national spirit",
+        "Nikkei: Japanese-Peruvian fusion cuisine"
+      ],
+      "cultural_significance": "Peruvian cuisine blends Inca, Spanish, Chinese, Japanese and African influences into a unique gastronomy recognized globally."
+    },
+    
+    "ingredients_glossary": {
+      "ají amarillo": "Yellow Peruvian chili, mild heat with fruity flavor",
+      "ají panca": "Red Peruvian chili, smoky and mild",
+      "leche de tigre": "Citrus marinade from ceviche, drunk as aphrodisiac",
+      "anticuchos": "Grilled heart skewers, popular street food",
+      "causa": "Layered potato dish, comfort food"
+    }
+  },
+  
+  "technical_specifications": {
+    "supported_languages": ["Italian", "Spanish", "English"],
+    "accessibility_features": ["Wheelchair accessible", "Multilingual menu"],
+    "payment_methods": ["Cash", "Credit cards", "Debit cards"],
+    "group_accommodations": "Up to 30 people with advance notice",
+    "parking": "Street parking available nearby",
+    "wifi": "Free for customers"
+  },
+  
+  "seasonal_information": {
+    "menu_updates": "Weekly specials, seasonal fish selections",
+    "holiday_schedules": "Check website for holiday closures",
+    "special_events": "Peruvian Independence Day celebrations, chef events",
+    "weather_considerations": "Outdoor seating when weather permits"
+  },
+  
+  "data_freshness": {
+    "menu_prices": "Updated weekly",
+    "opening_hours": "Updated in real-time", 
+    "availability": "Updated daily",
+    "events": "Updated as scheduled",
+    "last_verified": "2024-12-19"
+  }
+} 

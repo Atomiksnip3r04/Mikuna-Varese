@@ -1,0 +1,377 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Menu",
+  "name": "Menu Mikuna Ristorante Peruviano",
+  "description": "Menu autentico del ristorante peruviano Mikuna a Varese con piatti tradizionali del Perù",
+  "inLanguage": ["it", "es", "en"],
+  "provider": {
+    "@type": "Restaurant",
+    "name": "Mikuna",
+    "address": "Via Giulio Bizzozero 18, 21100, Varese, Italy",
+    "telephone": "+393758354504",
+    "url": "https://mikuna-varese.it"
+  },
+  "lastModified": "2024-12-19",
+  "currency": "EUR",
+  "hasMenuSection": [
+    {
+      "@type": "MenuSection",
+      "@id": "antipasti",
+      "name": {
+        "it": "Antipasti",
+        "es": "Entradas",
+        "en": "Appetizers"
+      },
+      "description": {
+        "it": "Piccoli assaggi della tradizione peruviana",
+        "es": "Pequeñas muestras de la tradición peruana",
+        "en": "Small tastes of Peruvian tradition"
+      },
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "@id": "anticucho",
+          "name": {
+            "it": "Anticucho de Corazón",
+            "es": "Anticucho de Corazón",
+            "en": "Anticucho de Corazón"
+          },
+          "description": {
+            "it": "Spiedini di cuore di manzo marinati con salsa ají panca",
+            "es": "Brochetas de corazón de res marinadas con salsa ají panca",
+            "en": "Beef heart skewers marinated with ají panca sauce"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "12.00",
+            "priceCurrency": "EUR"
+          },
+          "nutrition": {
+            "@type": "NutritionInformation",
+            "calories": "280"
+          },
+          "suitableForDiet": ["https://schema.org/GlutenFreeDiet"],
+          "tags": ["tradizionale", "grigliato", "piccante"]
+        },
+        {
+          "@type": "MenuItem",
+          "@id": "causa-limena",
+          "name": {
+            "it": "Causa Limeña",
+            "es": "Causa Limeña",
+            "en": "Causa Limeña"
+          },
+          "description": {
+            "it": "Tortino di patate gialle con avocado, tonno e maionese",
+            "es": "Pastel de papas amarillas con palta, atún y mayonesa",
+            "en": "Yellow potato cake with avocado, tuna and mayonnaise"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "10.00",
+            "priceCurrency": "EUR"
+          },
+          "tags": ["freddo", "vegetariano-opzione", "cremoso"]
+        }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "@id": "pesce",
+      "name": {
+        "it": "Pesce",
+        "es": "Pescados",
+        "en": "Fish"
+      },
+      "description": {
+        "it": "Specialità marine della costa peruviana",
+        "es": "Especialidades marinas de la costa peruana",
+        "en": "Marine specialties from the Peruvian coast"
+      },
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "@id": "ceviche-mixto",
+          "name": {
+            "it": "Ceviche Mixto",
+            "es": "Ceviche Mixto",
+            "en": "Mixed Ceviche"
+          },
+          "description": {
+            "it": "Pesce bianco e frutti di mare marinati nel lime, con cipolla rossa, sedano, peperoncino e coriandolo",
+            "es": "Pescado blanco y mariscos marinados en limón, con cebolla morada, apio, ají y cilantro",
+            "en": "White fish and seafood marinated in lime, with red onion, celery, chili and cilantro"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "18.00",
+            "priceCurrency": "EUR"
+          },
+          "nutrition": {
+            "@type": "NutritionInformation",
+            "calories": "220"
+          },
+          "suitableForDiet": ["https://schema.org/GlutenFreeDiet", "https://schema.org/LowCalorieDiet"],
+          "tags": ["signature", "fresco", "marinato", "senza-cottura"]
+        },
+        {
+          "@type": "MenuItem",
+          "@id": "tiradito",
+          "name": {
+            "it": "Tiradito Nikkei",
+            "es": "Tiradito Nikkei",
+            "en": "Nikkei Tiradito"
+          },
+          "description": {
+            "it": "Fettine sottili di pesce crudo con salsa leche de tigre e influenze giapponesi",
+            "es": "Láminas finas de pescado crudo con salsa leche de tigre e influencias japonesas",
+            "en": "Thin slices of raw fish with leche de tigre sauce and Japanese influences"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "16.00",
+            "priceCurrency": "EUR"
+          },
+          "tags": ["fusion", "crudo", "nikkei", "delicato"]
+        }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "@id": "carne",
+      "name": {
+        "it": "Carne",
+        "es": "Carnes",
+        "en": "Meat"
+      },
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "@id": "lomo-saltado",
+          "name": {
+            "it": "Lomo Saltado",
+            "es": "Lomo Saltado",
+            "en": "Lomo Saltado"
+          },
+          "description": {
+            "it": "Strisce di manzo saltate con cipolle, pomodori e patate fritte, servito con riso",
+            "es": "Tiras de carne salteadas con cebollas, tomates y papas fritas, servido con arroz",
+            "en": "Beef strips stir-fried with onions, tomatoes and french fries, served with rice"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "22.00",
+            "priceCurrency": "EUR"
+          },
+          "nutrition": {
+            "@type": "NutritionInformation",
+            "calories": "680"
+          },
+          "tags": ["signature", "saltado", "sostanzioso"]
+        },
+        {
+          "@type": "MenuItem",
+          "@id": "aji-gallina",
+          "name": {
+            "it": "Ají de Gallina",
+            "es": "Ají de Gallina",
+            "en": "Ají de Gallina"
+          },
+          "description": {
+            "it": "Pollo sfilacciato in cremosa salsa di ají amarillo con noci e parmigiano",
+            "es": "Pollo deshilachado en cremosa salsa de ají amarillo con nueces y queso parmesano",
+            "en": "Shredded chicken in creamy ají amarillo sauce with walnuts and parmesan cheese"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "19.00",
+            "priceCurrency": "EUR"
+          },
+          "tags": ["cremoso", "tradizionale", "speziato-dolce"]
+        }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "@id": "vegetariano",
+      "name": {
+        "it": "Vegetariano",
+        "es": "Vegetariano",
+        "en": "Vegetarian"
+      },
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "@id": "quinoa-salad",
+          "name": {
+            "it": "Insalata di Quinoa Andina",
+            "es": "Ensalada de Quinoa Andina",
+            "en": "Andean Quinoa Salad"
+          },
+          "description": {
+            "it": "Quinoa con verdure fresche, avocado e vinaigrette agli agrumi",
+            "es": "Quinoa con verduras frescas, palta y vinagreta cítrica",
+            "en": "Quinoa with fresh vegetables, avocado and citrus vinaigrette"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "14.00",
+            "priceCurrency": "EUR"
+          },
+          "suitableForDiet": ["https://schema.org/VegetarianDiet", "https://schema.org/VeganDiet", "https://schema.org/GlutenFreeDiet"],
+          "tags": ["superfood", "healthy", "andino"]
+        }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "@id": "bevande",
+      "name": {
+        "it": "Bevande",
+        "es": "Bebidas",
+        "en": "Drinks"
+      },
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "@id": "pisco-sour",
+          "name": {
+            "it": "Pisco Sour",
+            "es": "Pisco Sour",
+            "en": "Pisco Sour"
+          },
+          "description": {
+            "it": "Cocktail nazionale peruviano con pisco, lime, albume e angostura",
+            "es": "Cóctel nacional peruano con pisco, limón, clara de huevo y angostura",
+            "en": "Peruvian national cocktail with pisco, lime, egg white and angostura"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "8.00",
+            "priceCurrency": "EUR"
+          },
+          "tags": ["signature", "cocktail", "nazionale"]
+        },
+        {
+          "@type": "MenuItem",
+          "@id": "chicha-morada",
+          "name": {
+            "it": "Chicha Morada",
+            "es": "Chicha Morada",
+            "en": "Chicha Morada"
+          },
+          "description": {
+            "it": "Bevanda tradizionale a base di mais viola, spezie e frutta",
+            "es": "Bebida tradicional de maíz morado, especias y frutas",
+            "en": "Traditional drink made from purple corn, spices and fruits"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "5.00",
+            "priceCurrency": "EUR"
+          },
+          "suitableForDiet": ["https://schema.org/VeganDiet", "https://schema.org/GlutenFreeDiet"],
+          "tags": ["tradizionale", "analcolico", "antiossidante"]
+        }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "@id": "dolci",
+      "name": {
+        "it": "Dolci",
+        "es": "Postres",
+        "en": "Desserts"
+      },
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "@id": "tres-leches",
+          "name": {
+            "it": "Tres Leches",
+            "es": "Tres Leches",
+            "en": "Tres Leches"
+          },
+          "description": {
+            "it": "Torta spugnosa imbevuta di tre tipi di latte",
+            "es": "Bizcocho empapado en tres tipos de leche",
+            "en": "Sponge cake soaked in three types of milk"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "7.00",
+            "priceCurrency": "EUR"
+          },
+          "tags": ["cremoso", "dolce", "classico"]
+        },
+        {
+          "@type": "MenuItem",
+          "@id": "suspiro-limena",
+          "name": {
+            "it": "Suspiro a la Limeña",
+            "es": "Suspiro a la Limeña",
+            "en": "Suspiro a la Limeña"
+          },
+          "description": {
+            "it": "Dolce al caramello con meringa al porto",
+            "es": "Dulce de manjar blanco con merengue al oporto",
+            "en": "Caramel dessert with port wine meringue"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "8.00",
+            "priceCurrency": "EUR"
+          },
+          "tags": ["signature", "elegante", "tradizionale"]
+        }
+      ]
+    }
+  ],
+  "menuPriceRange": "€10-€25",
+  "keywords": [
+    "ristorante peruviano Varese",
+    "cucina peruviana autentica",
+    "ceviche Varese",
+    "lomo saltado",
+    "pisco sour",
+    "menu peruviano",
+    "Mikuna Varese",
+    "specialità Peru"
+  ],
+  "dietary_information": {
+    "vegetarian_options": true,
+    "vegan_options": true,
+    "gluten_free_options": true,
+    "allergeni_comuni": ["pesce", "crostacei", "uova", "latte", "frutta_secca"]
+  },
+  "ai_assistant_notes": {
+    "best_sellers": ["Ceviche Mixto", "Lomo Saltado", "Pisco Sour"],
+    "signature_dishes": ["Ceviche Mixto", "Lomo Saltado", "Ají de Gallina"],
+    "spice_levels": {
+      "mild": ["Causa Limeña", "Tres Leches"],
+      "medium": ["Ají de Gallina", "Lomo Saltado"],
+      "spicy": ["Anticucho de Corazón"]
+    },
+    "recommended_pairings": {
+      "Ceviche Mixto": "Chicha Morada o vino bianco",
+      "Lomo Saltado": "Pisco Sour o birra",
+      "Ají de Gallina": "Vino rosso leggero"
+    },
+    "cooking_times": {
+      "fast": ["Ceviche Mixto", "Tiradito"],
+      "medium": ["Lomo Saltado", "Anticucho"],
+      "slow": ["Ají de Gallina"]
+    },
+    "opening_hours": {
+      "sunday": {
+        "lunch": "12:00-15:00",
+        "dinner": "19:00-22:00"
+      },
+      "monday_wednesday_to_saturday": {
+        "lunch": "12:00-15:00",
+        "dinner": "19:00-22:00"
+      },
+      "tuesday": "closed"
+    }
+  }
+} 

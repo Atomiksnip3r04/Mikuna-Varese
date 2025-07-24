@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Siamo - Mikuna Ristorante Peruviano</title>
+    <meta name="description" content="Scopri la storia di Mikuna, il ristorante peruviano di Varese. La nostra passione per la cucina autentica del Perù e l'amore per i sapori tradizionali.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <h2>MIKUNA</h2>
+                <span class="nav-subtitle" data-key="nav-subtitle">Ristorante Peruviano</span>
+            </a>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link" data-key="nav-home">Home</a>
+                <a href="chi-siamo.html" class="nav-link active" data-key="nav-about">Chi Siamo</a>
+                <a href="menu.html" class="nav-link" data-key="nav-menu">Menù</a>
+
+                <a href="contatti.html" class="nav-link" data-key="nav-contact">Contatti</a>
+                <a href="prenota.html" class="nav-link cta" data-key="nav-booking">Prenota</a>
+            </div>
+
+            <div class="nav-extras">
+                <div class="language-selector">
+                    <button id="lang-btn" class="lang-btn">
+                        <span id="current-flag" class="current-flag">🇮🇹</span>
+                        <span id="current-lang">IT</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="lang-dropdown" id="lang-dropdown">
+                        <button onclick="changeLanguage('it')">
+                            <span class="flag-icon">🇮🇹</span>
+                            <span>Italiano</span>
+                        </button>
+                        <button onclick="changeLanguage('es')">
+                            <span class="flag-icon">🇵🇪</span>
+                            <span>Español</span>
+                        </button>
+                        <button onclick="changeLanguage('en')">
+                            <span class="flag-icon">🇬🇧</span>
+                            <span>English</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="page-hero-background" style="background-image: url('loghi/foto_chi_siamo.jpg')"></div>
+        <div class="page-hero-overlay"></div>
+        <div class="container">
+            <div class="page-hero-content">
+                <h1 data-key="about-hero-title">La Nostra Storia</h1>
+                <p data-key="about-hero-subtitle">Un viaggio culinario dal Perù a Varese</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="our-story">
+        <div class="container">
+            <div class="story-content">
+                <div class="story-text">
+                    <h2 data-key="story-title">La storia di Mikuna – Cucina peruviana a Varese, dal 1989 con passione</h2>
+                    <p data-key="story-text1">
+                        La nostra storia inizia molto lontano da Varese, precisamente a Huancayo, nel 1989, quando la nostra famiglia ha aperto il suo primo ristorante a conduzione familiare, specializzato nel celebre "pollo a la brasa", uno dei piatti più iconici della cucina peruviana. Il ristorante, intitolato a mio fratello Deybid, ha rappresentato per anni un punto di riferimento nella nostra comunità locale, restando attivo per quasi otto anni.
+                    </p>
+                    <p data-key="story-text2">
+                        In seguito, mia madre Fresia ha preso una decisione difficile ma necessaria: trasferirsi in Italia, con l'obiettivo di costruire un futuro migliore per la nostra famiglia. Dopo anni di impegno e sacrifici, tutta la nostra famiglia è riuscita a raggiungerla, portando con sé non solo le radici culturali, ma anche l'amore per la cucina tradizionale peruviana.
+                    </p>
+                    <p data-key="story-text3">
+                        Già nei primi anni in Italia abbiamo collaborato alla gestione di un ristorante a Varese, insieme ai miei zii e fratelli. È in questo contesto che abbiamo potuto far conoscere le nostre ricette e consolidare la nostra esperienza nel settore della ristorazione etnica e sudamericana.
+                    </p>
+                    <p data-key="story-text4">
+                        Dopo tanti anni di lavoro e di sogni condivisi, è nato finalmente Mikuna, il nostro ristorante di famiglia, nel cuore di Varese, in Via Giulio Bizzozero 18, 21100, Varese. Mikuna non è solo un luogo dove mangiare, ma è un vero e proprio viaggio nei sapori autentici del Perù, preparati con ingredienti selezionati e secondo le ricette della tradizione.
+                    </p>
+                    <p data-key="story-text5">
+                        Con molta esperienza culinaria alle spalle e una profonda conoscenza delle tecniche gastronomiche peruviane, oggi Mikuna rappresenta la sintesi perfetta tra tradizione, accoglienza e qualità. Vi aspettiamo per farvi vivere un'esperienza unica, all'insegna del gusto e della storia.
+                    </p>
+                </div>
+                
+                <div class="story-image">
+                    <img src="loghi/chi_siamo.jpg" alt="La famiglia Mikuna - La nostra storia dal Perù a Varese" loading="lazy">
+                    <div class="image-caption">
+                        <p data-key="story-image-caption">La nostra famiglia: un viaggio dal Perù a Varese</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission-section">
+        <div class="container">
+            <div class="mission-content">
+                <h2 data-key="mission-title">La Nostra Missione</h2>
+                <p data-key="mission-subtitle">Portare l'autentica esperienza culinaria peruviana nel cuore di Varese</p>
+                
+                <div class="mission-grid">
+                    <div class="mission-card">
+                        <div class="mission-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 data-key="mission-1-title">Autenticità</h3>
+                        <p data-key="mission-1-desc">
+                            Ogni piatto è preparato seguendo le ricette tradizionali peruviane, 
+                            utilizzando ingredienti autentici importati direttamente dal Perù.
+                        </p>
+                    </div>
+                    
+                    <div class="mission-card">
+                        <div class="mission-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3 data-key="mission-2-title">Qualità</h3>
+                        <p data-key="mission-2-desc">
+                            Selezioniamo solo i migliori ingredienti freschi, rispettando la stagionalità 
+                            e privilegiando fornitori locali quando possibile.
+                        </p>
+                    </div>
+                    
+                    <div class="mission-card">
+                        <div class="mission-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 data-key="mission-3-title">Ospitalità</h3>
+                        <p data-key="mission-3-desc">
+                            Accogliamo ogni ospite come parte della nostra famiglia, creando 
+                            un'atmosfera calda e familiare tipica della cultura peruviana.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-key="team-title">La Nostra Famiglia</h2>
+                <p data-key="team-subtitle">Mikuna è gestito in famiglia con amore e dedizione, mantenendo vive le tradizioni culinarie peruviane</p>
+            </div>
+            
+            <div class="family-team-grid">
+                <div class="family-member">
+                    <div class="member-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3 data-key="mother-name">Fresia Cano Rojas</h3>
+                        <p class="member-role" data-key="mother-role">Padrona di Casa</p>
+                        <p data-key="mother-bio">
+                            Il cuore pulsante di Mikuna. Fresia accoglie ogni ospite con il calore e l'ospitalità tipici della cultura peruviana, trasformando ogni visita in un'esperienza familiare autentica. La sua presenza garantisce che ogni dettaglio rifletta l'amore per la tradizione.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="family-member">
+                    <div class="member-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3 data-key="chef1-name">Renzo S.</h3>
+                        <p class="member-role" data-key="chef1-role">Chef Esecutivo</p>
+                        <p data-key="chef1-bio">
+                            Custode delle ricette di famiglia e maestro nelle tecniche culinarie peruviane. Renzo porta in cucina molta esperienza, combinando tradizione e passione per creare piatti che raccontano la vera storia del Perù.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="family-member">
+                    <div class="member-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3 data-key="chef2-name">Luis Soto</h3>
+                        <p class="member-role" data-key="chef2-role">Chef de Cuisine</p>
+                        <p data-key="chef2-bio">
+                            La nuova generazione che mantiene vive le tradizioni. Luis unisce la conoscenza tramandata dalla famiglia con tecniche moderne, assicurando che ogni piatto rispetti l'autenticità dei sapori peruviani mentre abbraccia l'innovazione.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="family-quote">
+                <blockquote>
+                    <i class="fas fa-quote-left"></i>
+                    <p>"Da molti anni la nostra famiglia porta avanti la tradizione culinaria peruviana con amore, passione e rispetto per le ricette che ci sono state tramandate. Ogni piatto è preparato come se fosse per la nostra stessa famiglia."</p>
+                    <footer>— La Famiglia Soto Cano</footer>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 data-key="cta-title">Vieni a Scoprire la Nostra Storia</h2>
+                <p data-key="cta-text">
+                    Ti aspettiamo da Mikuna per condividere con te la passione per la cucina peruviana 
+                    e farti vivere un'esperienza culinaria autentica nel cuore di Varese.
+                </p>
+                <div class="cta-buttons">
+                    <a href="menu.html" class="btn btn-primary" data-key="cta-menu-btn">Scopri il Menu</a>
+                    <a href="prenota.html" class="btn btn-outline" data-key="cta-booking-btn">Prenota un Tavolo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MIKUNA</h3>
+                    <p data-key="footer-description">
+                        Autentica cucina peruviana nel cuore di Varese. 
+                        Vieni a scoprire i sapori del Perù in un ambiente accogliente e familiare.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=61558083482452" target="_blank" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/mikunaitalia/" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tripadvisor.it/Restaurant_Review-g12850174-d27976419-Reviews-Mikuna-Bizzozero_Varese_Province_of_Varese_Lombardy.html?m=69573" target="_blank" rel="noopener noreferrer nofollow" class="social-link"><img src="loghi/tripadvisor_icon.png" alt="TripAdvisor"></a>
+                        <a href="https://www.thefork.it/ristorante/mikuna-r123456" target="_blank" rel="noopener noreferrer nofollow" class="social-link"><i class="fas fa-utensils"></i></a>
+                        <a href="https://wa.me/393758354504" target="_blank" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://deliveroo.it/it/menu/milano/varese/mikuna-via-giulio-bizzozero-18?utm_medium=affiliate&utm_source=tripadvisor&TAHotelCode=637764" target="_blank" rel="noopener noreferrer nofollow" class="social-link"><img src="loghi/deliveroo_icon.svg" alt="Deliveroo"></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 data-key="footer-links-title">Link Utili</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html" data-key="nav-home">Home</a></li>
+                        <li><a href="chi-siamo.html" data-key="nav-about">Chi Siamo</a></li>
+                        <li><a href="menu.html" data-key="nav-menu">Menù</a></li>
+                        <li><a href="contatti.html" data-key="nav-contact">Contatti</a></li>
+                        <li><a href="prenota.html" data-key="nav-booking">Prenota</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 data-key="footer-contact-title">Contatti</h4>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> Via Giulio Bizzozero 18, 21100, Varese</p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:+393758354504">+39 375 835 4504</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:mikunasoto@icloud.com">mikunasoto@icloud.com</a></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Mikuna Ristorante Peruviano. <span data-key="footer-rights">Tutti i diritti riservati.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

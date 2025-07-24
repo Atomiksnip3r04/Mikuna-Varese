@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prenota - Mikuna Ristorante Peruviano</title>
+    <meta name="description" content="Prenota il tuo tavolo da Mikuna, ristorante peruviano a Varese. Form semplice e veloce per riservare il tuo posto e gustare l'autentica cucina del Perù.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <h2>MIKUNA</h2>
+                <span class="nav-subtitle" data-key="nav-subtitle">Ristorante Peruviano</span>
+            </a>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link" data-key="nav-home">Home</a>
+                <a href="chi-siamo.html" class="nav-link" data-key="nav-about">Chi Siamo</a>
+                <a href="menu.html" class="nav-link" data-key="nav-menu">Menù</a>
+
+                <a href="contatti.html" class="nav-link" data-key="nav-contact">Contatti</a>
+                <a href="prenota.html" class="nav-link cta active" data-key="nav-booking">Prenota</a>
+            </div>
+
+            <div class="nav-extras">
+                <div class="language-selector">
+                    <button id="lang-btn" class="lang-btn">
+                        <span id="current-flag" class="current-flag">🇮🇹</span>
+                        <span id="current-lang">IT</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="lang-dropdown" id="lang-dropdown">
+                        <button onclick="changeLanguage('it')">
+                            <span class="flag-icon">🇮🇹</span>
+                            <span>Italiano</span>
+                        </button>
+                        <button onclick="changeLanguage('es')">
+                            <span class="flag-icon">🇵🇪</span>
+                            <span>Español</span>
+                        </button>
+                        <button onclick="changeLanguage('en')">
+                            <span class="flag-icon">🇬🇧</span>
+                            <span>English</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="page-hero-background" style="background-image: url('https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?w=1920&h=600&fit=crop')"></div>
+        <div class="page-hero-overlay"></div>
+        <div class="container">
+            <div class="page-hero-content">
+                <h1 data-key="booking-hero-title">Prenota il Tuo Tavolo</h1>
+                <p data-key="booking-hero-subtitle">Riservare è semplice e veloce. Ti aspettiamo per un'esperienza culinaria indimenticabile</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section class="booking-form-section">
+        <div class="container">
+            <div class="booking-layout">
+                
+                <!-- Booking Form -->
+                <div class="booking-form-container">
+                    <div class="form-header">
+                        <h2 data-key="booking-form-title">Compila i Tuoi Dati</h2>
+                        <p data-key="booking-form-subtitle">Inserisci le informazioni per la prenotazione. Ti contatteremo su WhatsApp per confermare</p>
+                    </div>
+                    
+                    <form class="booking-form" id="booking-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName" data-key="booking-first-name">Nome *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName" data-key="booking-last-name">Cognome *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone" data-key="booking-phone">Telefono *</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+39 000 000 0000" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" data-key="booking-email">Email</label>
+                                <input type="email" id="email" name="email" data-key="booking-email-placeholder" placeholder="">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date" data-key="booking-date">Data *</label>
+                                <input type="date" id="date" name="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="time" data-key="booking-time">Orario *</label>
+                                <select id="time" name="time" required>
+                                    <option value="" data-key="booking-select-time">Seleziona orario</option>
+                                    <optgroup data-key="booking-lunch" label="Pranzo">
+                                        <option value="12:00">12:00</option>
+                                        <option value="12:30">12:30</option>
+                                        <option value="13:00">13:00</option>
+                                        <option value="13:30">13:30</option>
+                                        <option value="14:00">14:00</option>
+                                        <option value="14:30">14:30</option>
+                                    </optgroup>
+                                    <optgroup data-key="booking-dinner" label="Cena">
+                                        <option value="19:00">19:00</option>
+                                        <option value="19:30">19:30</option>
+                                        <option value="20:00">20:00</option>
+                                        <option value="20:30">20:30</option>
+                                        <option value="21:00">21:00</option>
+                                        <option value="21:30">21:30</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="guests" data-key="booking-guests">Numero di Persone *</label>
+                                <select id="guests" name="guests" required>
+                                    <option value="" data-key="booking-select-guests">Seleziona numero persone</option>
+                                    <option value="1">1 persona</option>
+                                    <option value="2">2 persone</option>
+                                    <option value="3">3 persone</option>
+                                    <option value="4">4 persone</option>
+                                    <option value="5">5 persone</option>
+                                    <option value="6">6 persone</option>
+                                    <option value="7">7 persone</option>
+                                    <option value="8">8 persone</option>
+                                    <option value="8+">Più di 8 persone</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="occasion" data-key="booking-occasion">Occasione</label>
+                                <select id="occasion" name="occasion">
+                                    <option value="" data-key="booking-select-occasion">Seleziona occasione</option>
+                                    <option value="Cena normale" data-key="booking-normal-dinner">Cena normale</option>
+                                    <option value="Compleanno" data-key="booking-birthday">Compleanno</option>
+                                    <option value="Anniversario" data-key="booking-anniversary">Anniversario</option>
+                                    <option value="Cena romantica" data-key="booking-romantic">Cena romantica</option>
+                                    <option value="Cena di lavoro" data-key="booking-business">Cena di lavoro</option>
+                                    <option value="Evento speciale" data-key="booking-special">Evento speciale</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="requests" data-key="booking-requests">Richieste Particolari</label>
+                            <textarea id="requests" name="requests" rows="4" data-key="booking-requests-placeholder" placeholder=""></textarea>
+                        </div>
+                        
+                        <!-- Istruzioni per WhatsApp -->
+                        <div class="whatsapp-instructions">
+                            <div class="instructions-header">
+                                <i class="fab fa-whatsapp"></i>
+                                <h4>Come inviare la prenotazione</h4>
+                            </div>
+                            <div class="instructions-steps">
+                                <div class="instruction-step">
+                                    <span class="step-number">1</span>
+                                    <p>Compila il form e clicca "Invia Prenotazione su WhatsApp"</p>
+                                </div>
+                                <div class="instruction-step">
+                                    <span class="step-number">2</span>
+                                    <p>Si aprirà WhatsApp con il messaggio precompilato</p>
+                                </div>
+                                <div class="instruction-step highlight">
+                                    <span class="step-number">3</span>
+                                    <p><strong>Incolla il messaggio:</strong> Tieni premuto nella casella di testo di WhatsApp e seleziona "Incolla" dal menu che appare</p>
+                                </div>
+                                <div class="instruction-step">
+                                    <span class="step-number">4</span>
+                                    <p>Invia il messaggio e attendi la conferma</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary booking-submit-btn">
+                                <i class="fab fa-whatsapp"></i>
+                                <span data-key="booking-submit-btn">Invia Prenotazione su WhatsApp</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Booking Info -->
+                <div class="booking-info">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3 data-key="booking-info-hours-title">Orari di Apertura</h3>
+                        <div class="hours-info">
+                            <div class="hours-item">
+                                <span data-key="booking-hours-sunday">Domenica</span>
+                                <span>12-15, 19-22</span>
+                            </div>
+                            <div class="hours-item">
+                                <span data-key="booking-hours-open-days">Lunedì, Mercoledì - Sabato</span>
+                                <span>12-15, 19-22</span>
+                            </div>
+                            <div class="hours-item closed">
+                                <span data-key="booking-hours-tuesday">Martedì</span>
+                                <span data-key="booking-hours-closed">Chiuso</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-info-circle"></i>
+                        </div>
+                        <h3 data-key="booking-info-policy-title">Consigli per la Prenotazione</h3>
+                        <ul class="policy-list" data-key="booking-policy-list">
+                            <li>Le prenotazioni sono confermate via WhatsApp</li>
+                            <li>Consigliamo di prenotare con almeno 24h di anticipo</li>
+                            <li>Per gruppi superiori a 8 persone, contattaci direttamente</li>
+                            <li>È possibile modificare o cancellare fino a 2 ore prima</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h3 data-key="booking-info-menu-title">Menu Degustazione</h3>
+                        <p data-key="booking-menu-description">
+                            Chiedi del nostro menu degustazione per un viaggio completo 
+                            attraverso i sapori del Perù. Perfetto per occasioni speciali.
+                        </p>
+                        <a href="menu.html" class="info-link" data-key="booking-view-menu">Visualizza Menu</a>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h3 data-key="booking-info-contact-title">Contatti Diretti</h3>
+                        <div class="contact-methods">
+                            <a href="tel:+393758354504" class="contact-method">
+                                <i class="fas fa-phone"></i>
+                                <span>+39 375 835 4504</span>
+                            </a>
+                            <a href="https://wa.me/393758354504" class="contact-method whatsapp">
+                                <i class="fab fa-whatsapp"></i>
+                                <span data-key="booking-whatsapp-direct">WhatsApp Diretto</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 data-key="booking-cta-title">Non Vedi l'Ora di Assaggiare?</h2>
+                <p data-key="booking-cta-text">
+                    Scopri tutti i nostri piatti autentici nel menu o contattaci direttamente 
+                    per informazioni su eventi speciali e menu degustazione.
+                </p>
+                <div class="cta-buttons">
+                    <a href="menu.html" class="btn btn-primary" data-key="booking-cta-menu-btn">Esplora il Menu</a>
+                    <a href="contatti.html" class="btn btn-outline" data-key="booking-cta-contact-btn">Contattaci</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MIKUNA</h3>
+                    <p data-key="footer-description">
+                        Autentica cucina peruviana nel cuore di Varese. 
+                        Vieni a scoprire i sapori del Perù in un ambiente accogliente e familiare.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=61558083482452" target="_blank" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/mikunaitalia/" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tripadvisor.it/Restaurant_Review-g12850174-d27976419-Reviews-Mikuna-Bizzozero_Varese_Province_of_Varese_Lombardy.html?m=69573" target="_blank" rel="noopener noreferrer nofollow" class="social-link"><img src="loghi/tripadvisor_icon.png" alt="TripAdvisor"></a>
+                        <a href="https://www.thefork.it/ristorante/mikuna-r123456" target="_blank" rel="noopener noreferrer nofollow" class="social-link"><i class="fas fa-utensils"></i></a>
+                        <a href="https://wa.me/393758354504" target="_blank" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://deliveroo.it/it/menu/milano/varese/mikuna-via-giulio-bizzozero-18?utm_medium=affiliate&utm_source=tripadvisor&TAHotelCode=637764" target="_blank" rel="noopener noreferrer nofollow" class="social-link"><img src="loghi/deliveroo_icon.svg" alt="Deliveroo"></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 data-key="footer-links-title">Link Utili</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html" data-key="nav-home">Home</a></li>
+                        <li><a href="chi-siamo.html" data-key="nav-about">Chi Siamo</a></li>
+                        <li><a href="menu.html" data-key="nav-menu">Menù</a></li>
+                        <li><a href="contatti.html" data-key="nav-contact">Contatti</a></li>
+                        <li><a href="prenota.html" data-key="nav-booking">Prenota</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 data-key="footer-contact-title">Contatti</h4>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> Via Giulio Bizzozero 18, 21100, Varese</p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:+393758354504">+39 375 835 4504</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:mikunasoto@icloud.com">mikunasoto@icloud.com</a></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Mikuna Ristorante Peruviano. <span data-key="footer-rights">Tutti i diritti riservati.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Booking Form Handler - Versione ottimizzata per WhatsApp Business
+        document.getElementById('booking-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = {};
+            for (let [key, value] of formData.entries()) {
+                data[key] = value;
+            }
+            
+            // Validate required fields
+            if (!data.firstName || !data.lastName || !data.phone || !data.date || !data.time || !data.guests) {
+                alert('Per favore compila tutti i campi obbligatori.');
+                return;
+            }
+            
+            // Ottieni la lingua corrente
+            const currentLang = window.mikunaWebsite ? window.mikunaWebsite.currentLanguage : 'it';
+            
+            // Create WhatsApp message (semplificato, senza emoji)
+            const message = createWhatsAppMessage(data, currentLang);
+            
+            // Pulizia e encoding del messaggio per WhatsApp Business
+            const cleanMessage = message
+                .replace(/\*/g, '') // Rimuove asterischi
+                .replace(/[^\w\s\nàèéìíòóùúÀÈÉÌÍÒÓÙÚáéíóúÁÉÍÓÚäëïöüÄËÏÖÜñÑçÇ\-\.,!?:()]/g, '') // Solo caratteri sicuri
+                .trim();
+            
+            // Usa sempre api.whatsapp.com per massima compatibilità con WhatsApp Business
+            const whatsappURL = `https://api.whatsapp.com/send?phone=393758354504&text=${encodeURIComponent(cleanMessage)}`;
+            
+            // Copia negli appunti come backup (non bloccante)
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(cleanMessage).catch(() => {});
+            }
+
+            // Apre direttamente WhatsApp in nuova finestra
+            window.open(whatsappURL, '_blank');
+
+            // Reindirizza alla home in modo asincrono per evitare blocchi
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 100);
+        });
+        
+        function createWhatsAppMessage(data, lang) {
+            // Formatta la data in formato leggibile
+            const dateObj = new Date(data.date);
+            const formattedDate = dateObj.toLocaleDateString(lang === 'es' ? 'es-ES' : lang === 'en' ? 'en-US' : 'it-IT', { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            });
+            
+            let message = '';
+            
+            if (lang === 'it') {
+                message = `PRENOTAZIONE MIKUNA\n`;
+                message += `================================\n\n`;
+                message += `Nome: ${data.firstName} ${data.lastName}\n`;
+                message += `Telefono: ${data.phone}\n`;
+                if (data.email) message += `Email: ${data.email}\n`;
+                message += `Data: ${formattedDate}\n`;
+                message += `Orario: ${data.time}\n`;
+                message += `Persone: ${data.guests}\n`;
+                if (data.occasion && data.occasion !== 'Seleziona occasione') message += `Occasione: ${data.occasion}\n`;
+                if (data.requests) message += `Note: ${data.requests}\n`;
+                message += `\nGrazie per aver scelto Mikuna!\n`;
+                message += `Via Giulio Bizzozero 18, 21100, Varese`;
+            } else if (lang === 'es') {
+                message = `RESERVA MIKUNA\n`;
+                message += `============================\n\n`;
+                message += `Nombre: ${data.firstName} ${data.lastName}\n`;
+                message += `Telefono: ${data.phone}\n`;
+                if (data.email) message += `Email: ${data.email}\n`;
+                message += `Fecha: ${formattedDate}\n`;
+                message += `Horario: ${data.time}\n`;
+                message += `Personas: ${data.guests}\n`;
+                if (data.occasion && data.occasion !== 'Seleccionar ocasión') message += `Ocasion: ${data.occasion}\n`;
+                if (data.requests) message += `Notas: ${data.requests}\n`;
+                message += `\nGracias por elegir Mikuna!\n`;
+                message += `Via Giulio Bizzozero 18, 21100, Varese`;
+            } else {
+                message = `MIKUNA RESERVATION\n`;
+                message += `===============================\n\n`;
+                message += `Name: ${data.firstName} ${data.lastName}\n`;
+                message += `Phone: ${data.phone}\n`;
+                if (data.email) message += `Email: ${data.email}\n`;
+                message += `Date: ${formattedDate}\n`;
+                message += `Time: ${data.time}\n`;
+                message += `Guests: ${data.guests}\n`;
+                if (data.occasion && data.occasion !== 'Select occasion') message += `Occasion: ${data.occasion}\n`;
+                if (data.requests) message += `Notes: ${data.requests}\n`;
+                message += `\nThank you for choosing Mikuna!\n`;
+                message += `Via Giulio Bizzozero 18, 21100, Varese`;
+            }
+            
+            return message;
+        }
+        
+        // Set minimum date to today
+        document.getElementById('date').min = new Date().toISOString().split('T')[0];
+    </script>
+</body>
+</html> 

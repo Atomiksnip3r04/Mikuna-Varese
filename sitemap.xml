@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    
+    <!-- Homepage -->
+    <url>
+        <loc>https://mikuna-varese.it/</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="it" href="https://mikuna-varese.it/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://mikuna-varese.it/?lang=es" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://mikuna-varese.it/?lang=en" />
+        <image:image>
+            <image:loc>https://mikuna-varese.it/images/mikuna-ceviche-hero.webp</image:loc>
+            <image:title>Ceviche Peruviano - Specialità Mikuna</image:title>
+            <image:caption>Autentico ceviche peruviano preparato con pesce fresco</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://mikuna-varese.it/images/mikuna-interior.webp</image:loc>
+            <image:title>Interno Ristorante Mikuna Varese</image:title>
+            <image:caption>Atmosfera accogliente del ristorante peruviano Mikuna</image:caption>
+        </image:image>
+    </url>
+    
+    <!-- Chi Siamo -->
+    <url>
+        <loc>https://mikuna-varese.it/chi-siamo</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="it" href="https://mikuna-varese.it/chi-siamo" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://mikuna-varese.it/chi-siamo?lang=es" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://mikuna-varese.it/chi-siamo?lang=en" />
+    </url>
+    
+    <!-- Menu -->
+    <url>
+        <loc>https://mikuna-varese.it/menu</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="it" href="https://mikuna-varese.it/menu" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://mikuna-varese.it/menu?lang=es" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://mikuna-varese.it/menu?lang=en" />
+        <image:image>
+            <image:loc>https://mikuna-varese.it/images/ceviche-mixto.webp</image:loc>
+            <image:title>Ceviche Mixto - Menu Mikuna</image:title>
+            <image:caption>Ceviche con pesce bianco e frutti di mare</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://mikuna-varese.it/images/lomo-saltado.webp</image:loc>
+            <image:title>Lomo Saltado - Specialità Peruviana</image:title>
+            <image:caption>Tradizionale Lomo Saltado con manzo e patate</image:caption>
+        </image:image>
+    </url>
+    
+    <!-- Contatti -->
+    <url>
+        <loc>https://mikuna-varese.it/contatti</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="it" href="https://mikuna-varese.it/contatti" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://mikuna-varese.it/contatti?lang=es" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://mikuna-varese.it/contatti?lang=en" />
+    </url>
+    
+    <!-- Prenota -->
+    <url>
+        <loc>https://mikuna-varese.it/prenota</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="it" href="https://mikuna-varese.it/prenota" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://mikuna-varese.it/prenota?lang=es" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://mikuna-varese.it/prenota?lang=en" />
+    </url>
+    
+    
+    <!-- AI Interface -->
+    <url>
+        <loc>https://mikuna-varese.it/ai</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <!-- Blog Content -->
+    <url>
+        <loc>https://mikuna-varese.it/blog/guida-cucina-peruviana-lombardia</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="it" href="https://mikuna-varese.it/blog/guida-cucina-peruviana-lombardia" />
+        <image:image>
+            <image:loc>https://mikuna-varese.it/images/blog/cucina-peruviana-lombardia.webp</image:loc>
+            <image:title>Guida alla Cucina Peruviana in Lombardia</image:title>
+            <image:caption>La tradizione culinaria peruviana nei laghi lombardi</image:caption>
+        </image:image>
+    </url>
+    
+    <!-- Data endpoints for AI -->
+    <url>
+        <loc>https://mikuna-varese.it/data/menu.json</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://mikuna-varese.it/data/knowledge.json</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+</urlset> 

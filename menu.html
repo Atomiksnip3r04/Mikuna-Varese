@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menù - Mikuna Ristorante Peruviano</title>
+    <meta name="description" content="Scopri il menù di Mikuna con specialità peruviane autentiche: ceviche, anticuchos, lomo saltado e molto altro. Prezzi e descrizioni dettagliate.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <h2>MIKUNA</h2>
+                <span class="nav-subtitle" data-key="nav-subtitle">Ristorante Peruviano</span>
+            </a>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link" data-key="nav-home">Home</a>
+                <a href="chi-siamo.html" class="nav-link" data-key="nav-about">Chi Siamo</a>
+                <a href="menu.html" class="nav-link active" data-key="nav-menu">Menù</a>
+
+                <a href="contatti.html" class="nav-link" data-key="nav-contact">Contatti</a>
+                <a href="prenota.html" class="nav-link cta" data-key="nav-booking">Prenota</a>
+            </div>
+
+            <div class="nav-extras">
+                <div class="language-selector">
+                    <button id="lang-btn" class="lang-btn">
+                        <span id="current-flag" class="current-flag">🇮🇹</span>
+                        <span id="current-lang">IT</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="lang-dropdown" id="lang-dropdown">
+                        <button onclick="changeLanguage('it')">
+                            <span class="flag-icon">🇮🇹</span>
+                            <span>Italiano</span>
+                        </button>
+                        <button onclick="changeLanguage('es')">
+                            <span class="flag-icon">🇵🇪</span>
+                            <span>Español</span>
+                        </button>
+                        <button onclick="changeLanguage('en')">
+                            <span class="flag-icon">🇬🇧</span>
+                            <span>English</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <!-- Sezione rimossa su richiesta -->
+
+
+    <!-- Menu Navigation -->
+    <section class="menu-navigation">
+        <div class="container">
+            <div class="menu-nav-links">
+                <a href="#starters" class="menu-nav-link active">Starters</a>
+                <a href="#piatti-tipici" class="menu-nav-link">Piatti Tipici</a>
+                <a href="#ceviches" class="menu-nav-link">Ceviches</a>
+                <a href="#pollo-brasa" class="menu-nav-link">Pollo a la Brasa</a>
+                <a href="#combo" class="menu-nav-link">Combo & Contorni</a>
+                <a href="#bevande" class="menu-nav-link">Bevande</a>
+                <a href="#cocktail" class="menu-nav-link">Cocktail, Alcolici e Calici</a>
+                <a href="#dolci" class="menu-nav-link">Dolci</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Content -->
+    <main class="menu-content">
+        <div class="container">
+            
+            <!-- Starters Section -->
+            <section class="menu-section" id="starters">
+                <div class="menu-section-header">
+                    <h2>Starters (Antipasti)</h2>
+                    <p>Iniziate il vostro viaggio culinario con i nostri antipasti tradizionali peruviani</p>
+                </div>
+                
+                <div class="menu-grid">
+                    <div class="menu-item featured" id="menu-piatto-tris-di-causa">
+                        <button class="star-corner" aria-label="Piatti migliori" onclick="showBestsellerInsight(event)"></button>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Tris di Causa</h3>
+                                <span class="menu-item-price">€12</span>
+                            </div>
+                            <p>Degustazione di tre tortini di patate all'Aji Amarillo con polpo, gamberi e pollo.</p>
+                            <div class="menu-item-allergeni">
+                                <span class="allergeni-label">Allergeni:</span>
+                                <span class="allergeni-tags">2, 3, 4, 9, 12</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item featured">
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Leche di Tigre Mikuna</h3>
+                                <span class="menu-item-price">€14</span>
+                            </div>
+                            <p>Persico e frutti di mare marinati in Leche di tigre all'Aji Amarillo.</p>
+                            <div class="menu-item-allergeni">
+                                <span class="allergeni-label">Allergeni:</span>
+                                <span class="allergeni-tags">4, 9, 14</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Causa de Pollo</h3>
+                                <span class="menu-item-price">€8</span>
+                            </div>
+                            <p>Tortino di patate all'Aji Amarillo con ripieno di pollo, avocado, sedano e maionese.</p>
+                            <div class="menu-item-allergeni">
+                                <span class="allergeni-label">Allergeni:</span>
+                                <span class="allergeni-tags">1, 9</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Papa a la Huancaina</h3>
+                                <span class="menu-item-price">€8</span>
+                            </div>
+                            <p>Patate lesse con salsa andina a base di aji amarillo, formaggio, latte e crackers.</p>
+                            <div class="menu-item-allergeni">
+                                <span class="allergeni-label">Allergeni:</span>
+                                <span class="allergeni-tags">1, 3, 7, 9, 12</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Yuca Frita</h3>
+                                <span class="menu-item-price">€8</span>
+                            </div>
+                            <p>Manioca fritta con contorno di Crema alla Huancaina.</p>
+                            <div class="menu-item-allergeni">
+                                <span class="allergeni-label">Allergeni:</span>
+                                <span class="allergeni-tags">1*, 7</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item" id="menu-piatto-chips-acevichados">
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Chips Acevichados</h3>
+                                <span class="menu-item-price">€10</span>
+                            </div>
+                            <p>Persico marinato in Leche di Tigre servito su chips di Platano Fritto.</p>
+                            <div class="menu-item-allergeni">
+                                <span class="allergeni-label">Allergeni:</span>
+                                <span class="allergeni-tags">1*, 3, 4, 9</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item featured">
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Causa Acevichada</h3>
+                                <span class="menu-item-price">€15</span>
+                            </div>
+                            <p>Persico marinato in Leche de Tigre servito su un letto di Causa de Pollo.</p>
+                            <div class="menu-item-allergeni">
+                                <span class="allergeni-label">Allergeni:</span>
+                                <span class="allergeni-tags">1*, 4, 9</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Tamal</h3>
+                                <span class="menu-item-price">€8</span>
+                            </div>
+                            <p>Impasto di mais ripieno con pollo, maiale, olive, uova, aji amarillo con contorno di salsa criolla.</p>
+                            <div class="menu-item-allergeni">
+                                <span class="allergeni-label">Allergeni:</span>
+                                <span class="allergeni-tags">1, 3, 12</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Salchipapas</h3>
+                                <span class="menu-item-price">€8</span>
+                            </div>
+                            <p>Patatine fritte, würstel e insalata con vinaigrette ai cetrioli.</p>
+                            <div class="menu-item-allergeni">
+                                <span class="allergeni-label">Allergeni:</span>
+                                <span class="allergeni-tags">1*</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Patacones con Queso</h3>
+                                <span class="menu-item-price">€7</span>
+                            </div>
+                            <p>Platano verde fritto e Caciotta.</p>
+                            <div class="menu-item-allergeni">
+                                <span class="allergeni-label">Allergeni:</span>
+                                <span class="allergeni-tags">1*, 7</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Piatti Tipici Section -->
+            <section class="menu-section" id="piatti-tipici">
+                <div class="menu-section-header">
+                    <h2>Piatti Tipici</h2>
+                    <p>Le specialità tradizionali che rappresentano l'essenza della cucina peruviana</p>
+                </div>
+                
+                <div class="menu-grid">
+                    <div class="menu-item featured" id="menu-piatto-polpo-anticuchero">
+                        <button class="star-corner" aria-label="Piatti migliori" onclick="showBestsellerInsight(event)"></button>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Polpo Anticuchero</h3>
+                                <span class="menu-item-price">€17</span>
+                            </div>
+                            <p>Polpo alla griglia in salsa peruviana all'Aji Panca, chimichurri e patate grigliate.</p>
+                            <div class="menu-item-allergeni">
+                                <span class="allergeni-label">Allergeni:</span>
+                                <span class="allergeni-tags">14</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item" id="menu-piatto-aji-de-gallina">
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Aji de Gallina</h3>
+                                <span class="menu-item-price">€15</span>
+                            </div>
+                            <p>Pollo sminuzzato con salsa casereccia a base di Aji Amarillo, riso e patate lesse.</p>
+                            <div class="menu-item-allergeni">
+                                <span class="allergeni-label">Allergeni:</span>
+                                <span class="allergeni-tags">3, 7</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item" id="menu-piatto-chaufa-de-pollo">
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Chaufa de Pollo</h3>
+                                <span class="menu-item-price">€13</span>
+                            </div>
+                            <p>Bocconcini di pollo saltati con riso, uova, erba cipollina, soia, zenzero e olio di sesamo.</p>
+                            <div class="menu-item-allergeni">
+                                <span class="allergeni-label">Allergeni:</span>
+                                <span class="allergeni-tags">3, 6, 11</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Chaufa Especial</h3>
+                                <span class="menu-item-price">€15</span>
+                            </div>
+                            <p>Bocconcini di pollo e gamberetti saltati con riso, uova, erba cipollina, soia, zenzero e olio di sesamo.</p>
+                            <div class="menu-item-allergeni">
+                                <span class="allergeni-label">Allergeni:</span>
+                                <span class="allergeni-tags">2, 3, 6, 11</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item featured" id="menu-piatto-lomo-saltado">
+                        <button class="star-corner" aria-label="Piatti migliori" onclick="showBestsellerInsight(event)"></button>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Lomo Saltado</h3>
+                                <span class="menu-item-price">€16</span>
+                            </div>
+                            <p>Straccetti di manzo Angus saltati in salsa di soia con aceto, aji amarillo, cipollotto e pomodori, con contorno di riso e patatine fritte.</p>
+                            <div class="menu-item-allergeni">
+                                <span class="allergeni-label">Allergeni:</span>
+                                <span class="allergeni-tags">1*, 6</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item featured">
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Lomo a lo Pobre</h3>
+                                <span class="menu-item-price">€18</span>
+                            </div>
+                            <p>Straccetti di manzo Angus saltati in salsa di soia con aceto, cipollotto e pomodori, con contorno di patatine fritte, platano fritto, riso e uovo fritto.</p>
+                            <div class="menu-item-allergeni">
+                                <span class="allergeni-label">Allergeni:</span>
+                                <span class="allergeni-tags">1*, 3, 6</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Anticuchos</h3>
+                                <span class="menu-item-price">€12</span>
+                            </div>
+                            <p>Spiedini di cuore di manzo marinati in salsa peruviana a base di aji panca, con contorno di patate lesse, salsa Huancaina e Chimichurri.</p>
+                            <div class="menu-item-allergeni">
+                                <span class="allergeni-label">Allergeni:</span>
+                                <span class="allergeni-tags">6, 11</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Pollo Broaster</h3>
+                                <span class="menu-item-price">€13</span>
+                            </div>
+                            <p>Pollo fritto impanato e marinato in salsa peruviana a base di uova, latte e soia, con contorno di patatine fritte e insalata.</p>
+                            <div class="menu-item-allergeni">
+                                <span class="allergeni-label">Allergeni:</span>
+                                <span class="allergeni-tags">1, 3, 6, 10, 11</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Fettuccini con Lomo Saltado</h3>
+                                <span class="menu-item-price">€17</span>
+                            </div>
+                            <p>Fettuccini in salsa Huancaina con contorno di Lomo Saltado.</p>
+                            <div class="menu-item-allergeni">
+                                <span class="allergeni-label">Allergeni:</span>
+                                <span class="allergeni-tags">3, 6, 7</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Bistec a lo Pobre</h3>
+                                <span class="menu-item-price">€15</span>
+                            </div>
+                            <p>Bistecca di manzo con contorno di patatine fritte, platano fritto, würstel, riso e uovo.</p>
+                            <div class="menu-item-allergeni">
+                                <span class="allergeni-label">Allergeni:</span>
+                                <span class="allergeni-tags">1*, 3</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Ceviches Section -->
+            <section class="menu-section" id="ceviches">
+                <div class="menu-section-header">
+                    <h2>Ceviches & Frutti di Mare</h2>
+                    <p>I tesori del mare peruviano preparati con la tradizionale marinatura al lime</p>
+                </div>
+                
+                <div class="menu-grid">
+                    <div class="menu-item featured" id="menu-piatto-ceviche">
+                        <button class="star-corner" aria-label="Piatti migliori" onclick="showBestsellerInsight(event)"></button>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Ceviche Classico</h3>
+                                <span class="menu-item-price">€16</span>
+                            </div>
+                            <p>Pesce Persico marinato con lime, aji limo, coriandolo, cipolla e zenzero, accompagnato da mais, patata dolce e mais fritto.</p>
+                            <div class="menu-item-allergeni">
+                                <span class="allergeni-label">Allergeni:</span>
+                                <span class="allergeni-tags">4, 9</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item featured" id="menu-piatto-ceviche-mixto">
+                        <button class="star-corner" aria-label="Piatti migliori" onclick="showBestsellerInsight(event)"></button>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Ceviche Mixto</h3>
+                                <span class="menu-item-price">€18</span>
+                            </div>
+                            <p>Persico e frutti di mare marinati con lime, aji limo, coriandolo, cipolla e zenzero, accompagnato da patata dolce, mais e mais fritto.</p>
+                            <div class="menu-item-allergeni">
+                                <span class="allergeni-label">Allergeni:</span>
+                                <span class="allergeni-tags">4, 9, 14</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item" id="menu-piatto-arroz-con-mariscos">
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Arroz con Mariscos</h3>
+                                <span class="menu-item-price">€17</span>
+                            </div>
+                            <p>Riso con frutti di mare marinati e saltati in salsa peruviana a base di aji panca, aji amarillo e grana, con lime e un piccolo shot di leche de tigre.</p>
+                            <div class="menu-item-allergeni">
+                                <span class="allergeni-label">Allergeni:</span>
+                                <span class="allergeni-tags">4, 9, 14</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Pescado Frito</h3>
+                                <span class="menu-item-price">€17</span>
+                            </div>
+                            <p>Orata fritta con contorno di riso, manioca fritta e salsa criolla.</p>
+                            <div class="menu-item-allergeni">
+                                <span class="allergeni-label">Allergeni:</span>
+                                <span class="allergeni-tags">1, 4</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Chaufa de Mariscos</h3>
+                                <span class="menu-item-price">€17</span>
+                            </div>
+                            <p>Riso saltato con frutti di mare, uova, erba cipollina, olio di sesamo, soia e zenzero.</p>
+                            <div class="menu-item-allergeni">
+                                <span class="allergeni-label">Allergeni:</span>
+                                <span class="allergeni-tags">3, 4, 6, 11, 14</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pollo a la Brasa Section -->
+            <section class="menu-section" id="pollo-brasa">
+                <div class="menu-section-header">
+                    <h2>Pollo a la Brasa</h2>
+                    <p>Il celebre pollo alla griglia peruviano, marinato in salse tradizionali e cotto alla perfezione</p>
+                </div>
+                
+                <div class="menu-grid menu-grid-brasa">
+                    <div class="menu-item featured pollo-intero">
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Pollo a la Brasa Intero</h3>
+                                <span class="menu-item-price">€35</span>
+                                <span class="portions">(per 4 persone)</span>
+                            </div>
+                            <p>Pollo campese in lunga marinatura di salse peruviane con contorno di patatine fritte e insalata con vinaigrette ai cetrioli.</p>
+                            <div class="menu-item-allergeni">
+                                <span class="allergeni-label">Allergeni:</span>
+                                <span class="allergeni-tags">1, 6, 8, 9, 10, 11, 12</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>1/2 Pollo a la Brasa</h3>
+                                <span class="menu-item-price">€20</span>
+                            </div>
+                            <p>Mezza porzione del nostro celebre pollo a la brasa con contorni.</p>
+                            <div class="menu-item-allergeni">
+                                <span class="allergeni-label">Allergeni:</span>
+                                <span class="allergeni-tags">1, 6, 8, 9, 10, 11, 12</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>1/4 Pollo a la Brasa</h3>
+                                <span class="menu-item-price">€11</span>
+                            </div>
+                            <p>Porzione individuale del nostro celebre pollo a la brasa con contorni.</p>
+                            <div class="menu-item-allergeni">
+                                <span class="allergeni-label">Allergeni:</span>
+                                <span class="allergeni-tags">1, 6, 8, 9, 10, 11, 12</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Combo & Contorni Section -->
+            <section class="menu-section" id="combo">
+                <div class="menu-section-header">
+                    <h2>Combo & Contorni</h2>
+                    <p>Combinazioni speciali e contorni per completare la vostra esperienza culinaria</p>
+                </div>
+                
+                <div class="combo-grid">
+                    <div class="combo-section">
+                        <h3 class="combo-title">Combo</h3>
+                        <div class="combo-items">
+                            <div class="combo-item">
+                                <div class="combo-header">
+                                    <span class="combo-name">Ceviche + Chaufa de Pollo</span>
+                                    <span class="combo-price">€22</span>
+                                </div>
+                            </div>
+                            <div class="combo-item">
+                                <div class="combo-header">
+                                    <span class="combo-name">Ceviche + Arroz con Mariscos</span>
+                                    <span class="combo-price">€24</span>
+                                </div>
+                            </div>
+                            <div class="combo-item featured" id="menu-piatto-bis-ceviche-chicharron-de-pescado">
+                                <button class="star-corner" aria-label="Piatti migliori" onclick="showBestsellerInsight(event)"></button>
+                                <div class="combo-header">
+                                    <span class="combo-name">Ceviche + Chaufa de Mariscos + Chicharron de Pescado</span>
+                                    <span class="combo-price">€32</span>
+                                </div>
+                            </div>
+                            <div class="combo-item">
+                                <div class="combo-header">
+                                    <span class="combo-name">Ceviche + Arroz con Mariscos + Chicharron de Pescado</span>
+                                    <span class="combo-price">€34</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="combo-section">
+                        <h3 class="combo-title">Contorni</h3>
+                        <div class="combo-items">
+                            <div class="combo-item">
+                                <div class="combo-header">
+                                    <span class="combo-name">Riso Basmati</span>
+                                    <span class="combo-price">€5</span>
+                                </div>
+                            </div>
+                            <div class="combo-item">
+                                <div class="combo-header">
+                                    <span class="combo-name">Patatine Fritte</span>
+                                    <span class="combo-price">€5</span>
+                                </div>
+                            </div>
+                            <div class="combo-item">
+                                <div class="combo-header">
+                                    <span class="combo-name">Patate Dolci</span>
+                                    <span class="combo-price">€5</span>
+                                </div>
+                            </div>
+                            <div class="combo-item">
+                                <div class="combo-header">
+                                    <span class="combo-name">Insalata</span>
+                                    <span class="combo-price">€5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bevande Section -->
+            <section class="menu-section" id="bevande">
+                <div class="menu-section-header">
+                    <h2>Bevande</h2>
+                    <p>Bevande tradizionali peruviane e selezioni per accompagnare i vostri piatti</p>
+                </div>
+                
+                <div class="bevande-grid">
+                    <div class="bevande-section">
+                        <h3 class="bevande-title">Analcoliche</h3>
+                        <div class="bevande-items">
+                            <div class="bevanda-item featured">
+                                <div class="bevanda-header">
+                                    <span class="bevanda-name">Chicha Morada</span>
+                                    <span class="bevanda-price">€3</span>
+                                </div>
+                                <p class="bevanda-desc">Bevanda tipica peruviana fatta con mais viola</p>
+                            </div>
+                            <div class="bevanda-item">
+                                <div class="bevanda-header">
+                                    <span class="bevanda-name">Chicha Morada (1lt)</span>
+                                    <span class="bevanda-price">€10</span>
+                                </div>
+                            </div>
+                            <div class="bevanda-item">
+                                <div class="bevanda-header">
+                                    <span class="bevanda-name">Maracuya (1lt)</span>
+                                    <span class="bevanda-price">€12</span>
+                                </div>
+                            </div>
+                            <div class="bevanda-item featured">
+                                <div class="bevanda-header">
+                                    <span class="bevanda-name">Inka Cola Peruvana (1,5lt)</span>
+                                    <span class="bevanda-price">€8</span>
+                                </div>
+                                <p class="bevanda-desc">Bevanda gassata peruviana dal gusto frizzante e dolce</p>
+                            </div>
+                            <div class="bevanda-item">
+                                <div class="bevanda-header">
+                                    <span class="bevanda-name">Inka Cola Vidrio (33cl)</span>
+                                    <span class="bevanda-price">€3</span>
+                                </div>
+                            </div>
+                            <div class="bevanda-item">
+                                <div class="bevanda-header">
+                                    <span class="bevanda-name">Inka Cola Gordita (62cl)</span>
+                                    <span class="bevanda-price">€6</span>
+                                </div>
+                            </div>
+                            <div class="bevanda-item">
+                                <div class="bevanda-header">
+                                    <span class="bevanda-name">Acqua (1lt, naturale)</span>
+                                    <span class="bevanda-price">€3</span>
+                                </div>
+                            </div>
+                            <div class="bevanda-item">
+                                <div class="bevanda-header">
+                                    <span class="bevanda-name">Acqua (50cl, naturale o frizzante)</span>
+                                    <span class="bevanda-price">€1.50</span>
+                                </div>
+                            </div>
+                            <div class="bevanda-item">
+                                <div class="bevanda-header">
+                                    <span class="bevanda-name">Bibita (1,5lt, Coca Cola - Inka Cola italiana)</span>
+                                    <span class="bevanda-price">€5</span>
+                                </div>
+                            </div>
+                            <div class="bevanda-item">
+                                <div class="bevanda-header">
+                                    <span class="bevanda-name">Bibita Lattina (33cl, Coca Cola - Fanta - Sprite - Thè)</span>
+                                    <span class="bevanda-price">€3</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bevande-section">
+                        <h3 class="bevande-title">Caffetteria</h3>
+                        <div class="bevande-items">
+                            <div class="bevanda-item">
+                                <div class="bevanda-header">
+                                    <span class="bevanda-name">Caffè</span>
+                                    <span class="bevanda-price">€1.20</span>
+                                </div>
+                            </div>
+                            <div class="bevanda-item">
+                                <div class="bevanda-header">
+                                    <span class="bevanda-name">Cappuccino</span>
+                                    <span class="bevanda-price">€1.50</span>
+                                </div>
+                            </div>
+                            <div class="bevanda-item">
+                                <div class="bevanda-header">
+                                    <span class="bevanda-name">Latte Macchiato</span>
+                                    <span class="bevanda-price">€2.50</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cocktail Section -->
+            <section class="menu-section" id="cocktail">
+                <div class="menu-section-header">
+                    <h2>Cocktail, Alcolici e Calici</h2>
+                    <p>Cocktail tradizionali peruviani, selezione di bevande alcoliche e calici di vino</p>
+                </div>
+                
+                <div class="bevande-grid">
+                    <div class="bevande-section">
+                        <h3 class="bevande-title">Cocktails</h3>
+                        <div class="bevande-items">
+                            <div class="bevanda-item featured" id="menu-piatto-pisco-sour">
+                                <button class="star-corner" aria-label="Piatti migliori" onclick="showBestsellerInsight(event)"></button>
+                                <div class="bevanda-header">
+                                    <span class="bevanda-name">Pisco Sour (1/2 lt)</span>
+                                    <span class="bevanda-price">€12</span>
+                                </div>
+                                <p class="bevanda-desc">Cocktail a base di Pisco, zucchero, lime ed albume d'uovo</p>
+                            </div>
+                            <div class="bevanda-item featured" id="menu-piatto-pisco-sour-1lt">
+                                <button class="star-corner" aria-label="Piatti migliori" onclick="showBestsellerInsight(event)"></button>
+                                <div class="bevanda-header">
+                                    <span class="bevanda-name">Pisco Sour (1lt)</span>
+                                    <span class="bevanda-price">€24</span>
+                                </div>
+                                <p class="bevanda-desc">Cocktail a base di Pisco, zucchero, lime ed albume d'uovo</p>
+                            </div>
+                            <div class="bevanda-item">
+                                <div class="bevanda-header">
+                                    <span class="bevanda-name">Spritz</span>
+                                    <span class="bevanda-price">€5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bevande-section">
+                        <h3 class="bevande-title">Birre</h3>
+                        <div class="bevande-items">
+                            <div class="bevanda-item">
+                                <div class="bevanda-header">
+                                    <span class="bevanda-name">Birra (66cl, Heineken - Moretti)</span>
+                                    <span class="bevanda-price">€4</span>
+                                </div>
+                            </div>
+                            <div class="bevanda-item">
+                                <div class="bevanda-header">
+                                    <span class="bevanda-name">Birra (33cl, Heineken - Moretti - Corona)</span>
+                                    <span class="bevanda-price">€3</span>
+                                </div>
+                            </div>
+                            <div class="bevanda-item featured">
+                                <div class="bevanda-header">
+                                    <span class="bevanda-name">Cusquena (33cl)</span>
+                                    <span class="bevanda-price">€4</span>
+                                </div>
+                                <p class="bevanda-desc">Birra tipica peruviana: Dark Larger, Golden Larger, Wheat</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bevande-section">
+                        <h3 class="bevande-title">Shots & Liquori</h3>
+                        <div class="bevande-items">
+                            <div class="bevanda-item">
+                                <div class="bevanda-header">
+                                    <span class="bevanda-name">Shot</span>
+                                    <span class="bevanda-price">€3</span>
+                                </div>
+                                <p class="bevanda-desc">Sambuca, Jägermeister, Grappa, Amaro, Disaronno, Pisco</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bevande-section">
+                        <h3 class="bevande-title">Calici & Vini</h3>
+                        <div class="bevande-items">
+                            <div class="bevanda-item">
+                                <div class="bevanda-header">
+                                    <span class="bevanda-name">Frizzantino Chardonnay</span>
+                                    <span class="bevanda-price">Calice: €5 | Bottiglia: €15</span>
+                                </div>
+                                <p class="bevanda-desc">Aroma di bouquet, acidulo ed estremamente versatile negli abbinamenti cibo-vino.</p>
+                            </div>
+                            <div class="bevanda-item">
+                                <div class="bevanda-header">
+                                    <span class="bevanda-name">Callia Torrontes</span>
+                                    <span class="bevanda-price">Calice: €6 | Bottiglia: €19</span>
+                                </div>
+                                <p class="bevanda-desc">Il Torrontes è un vitigno tipico del nord Argentina. Questa varietà presenta un ricco bouquet aromatico, con note floreali e fruttate, come litchi, pesca e pompelmo. Il vino ha un tono fresco, equilibrato e una buona acidità.</p>
+                            </div>
+                            <div class="bevanda-item">
+                                <div class="bevanda-header">
+                                    <span class="bevanda-name">Intipalka Reserva Cabernet Sauvignon – Petit Verdot</span>
+                                    <span class="bevanda-price">Calice: €7 | Bottiglia: €29</span>
+                                </div>
+                                <p class="bevanda-desc">Aroma di frutti rossi maturi e terra, delicato ma complesso al palato con un retrogusto persistente e speziato.</p>
+                            </div>
+                            <div class="bevanda-item">
+                                <div class="bevanda-header">
+                                    <span class="bevanda-name">Intipalka Syrah</span>
+                                    <span class="bevanda-price">Calice: €6 | Bottiglia: €24</span>
+                                </div>
+                                <p class="bevanda-desc">Vivace colore rosa salmone. Al naso evidenzia sentori di fiori di biancospino, mela, mandorla e ciliegia selvatica. In bocca è gustoso, fresco e sapido.</p>
+                            </div>
+                        </div>
+                        <div class="bevanda-disclaimer" style="margin-top:2rem; font-style:italic; color:#666;">
+                            Altri vini tipici della tradizione peruviana disponibili: chiedi alla casa per scoprire la selezione completa!
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Dolci Section -->
+            <section class="menu-section" id="dolci">
+                <div class="menu-section-header">
+                    <h2>Dolci Fatti in Casa</h2>
+                    <p>Dolci tradizionali peruviani preparati nella nostra cucina con ricette di famiglia</p>
+                </div>
+                
+                <div class="menu-grid">
+                    <div class="menu-item featured">
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Tres Leches</h3>
+                                <span class="menu-item-price">€7</span>
+                            </div>
+                            <p>Pan di Spagna con latte condensato, evaporato e panna.</p>
+                            <div class="menu-item-allergeni">
+                                <span class="allergeni-label">Allergeni:</span>
+                                <span class="allergeni-tags">1, 3, 7</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item featured" id="menu-piatto-torta-chocolate">
+                        <button class="star-corner" aria-label="Piatti migliori" onclick="showBestsellerInsight(event)"></button>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Torta Cioccolato</h3>
+                                <span class="menu-item-price">€8</span>
+                            </div>
+                            <p>Ricca torta al cioccolato preparata secondo la tradizione di famiglia.</p>
+                            <div class="menu-item-allergeni">
+                                <span class="allergeni-label">Allergeni:</span>
+                                <span class="allergeni-tags">1, 3, 7</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Gelatina</h3>
+                                <span class="menu-item-price">€5</span>
+                            </div>
+                            <p>Gelatina fresca e delicata, perfetta per concludere il pasto.</p>
+                            <div class="menu-item-allergeni">
+                                <span class="allergeni-label">Allergeni:</span>
+                                <span class="allergeni-tags">1</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Panna Cotta al Maracujá</h3>
+                                <span class="menu-item-price">€7</span>
+                            </div>
+                            <p>Cremosa panna cotta con il sapore esotico del maracujá.</p>
+                            <div class="menu-item-allergeni">
+                                <span class="allergeni-label">Allergeni:</span>
+                                <span class="allergeni-tags">1, 3, 7</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item featured">
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Cheesecake al Maracujá</h3>
+                                <span class="menu-item-price">€8</span>
+                            </div>
+                            <p>Cheesecake cremosa con la freschezza tropicale del maracujá.</p>
+                            <div class="menu-item-allergeni">
+                                <span class="allergeni-label">Allergeni:</span>
+                                <span class="allergeni-tags">1, 3, 7</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sezione allergeni migliorata graficamente -->
+            <section class="allergeni-section">
+                <div class="container">
+                    <h2 class="allergeni-title"><i class="fas fa-exclamation-triangle"></i> Allergeni e Intolleranze</h2>
+                    <p class="allergeni-description">Se hai allergie o intolleranze alimentari, comunicacelo prima di ordinare. I nostri piatti possono contenere i seguenti allergeni:</p>
+                    <div class="allergeni-list">
+                        <div class="allergeni-card"><span class="allergeni-number">1</span> Glutine <span class="allergeni-note">*</span></div>
+                        <div class="allergeni-card"><span class="allergeni-number">2</span> Crostacei</div>
+                        <div class="allergeni-card"><span class="allergeni-number">3</span> Uova</div>
+                        <div class="allergeni-card"><span class="allergeni-number">4</span> Pesce</div>
+                        <div class="allergeni-card"><span class="allergeni-number">5</span> Arachidi</div>
+                        <div class="allergeni-card"><span class="allergeni-number">6</span> Soia</div>
+                        <div class="allergeni-card"><span class="allergeni-number">7</span> Latte</div>
+                        <div class="allergeni-card"><span class="allergeni-number">8</span> Frutta a guscio</div>
+                        <div class="allergeni-card"><span class="allergeni-number">9</span> Sedano</div>
+                        <div class="allergeni-card"><span class="allergeni-number">10</span> Senape</div>
+                        <div class="allergeni-card"><span class="allergeni-number">11</span> Sesamo</div>
+                        <div class="allergeni-card"><span class="allergeni-number">12</span> Anidride solforosa</div>
+                        <div class="allergeni-card"><span class="allergeni-number">13</span> Lupini</div>
+                        <div class="allergeni-card"><span class="allergeni-number">14</span> Molluschi</div>
+                    </div>
+                    <p class="allergeni-note">* Alcuni piatti possono contenere tracce di glutine.</p>
+                </div>
+            </section>
+            <!-- Fine sezione allergeni -->
+
+        </div>
+    </main>
+
+    <!-- Coperto Info -->
+    <section class="menu-info">
+        <div class="container">
+            <div class="menu-info-cards" style="justify-content: center;">
+                <div class="info-card">
+                    <i class="fas fa-utensils"></i>
+                    <span class="info-text">Coperto (Tovagliato): <strong>1€</strong></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 data-key="menu-cta-title">Pronto a Gustare i Sapori del Perù?</h2>
+                <p data-key="menu-cta-text">
+                    Prenota il tuo tavolo da Mikuna e lasciati trasportare in un viaggio culinario 
+                    attraverso i sapori autentici della tradizione peruviana.
+                </p>
+                <div class="cta-buttons">
+                    <a href="prenota.html" class="btn btn-primary" data-key="menu-cta-booking-btn">Prenota Ora</a>
+                    <a href="contatti.html" class="btn btn-outline" data-key="menu-cta-contact-btn">Contattaci</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MIKUNA</h3>
+                    <p data-key="footer-description">
+                        Autentica cucina peruviana nel cuore di Varese. 
+                        Vieni a scoprire i sapori del Perù in un ambiente accogliente e familiare.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=61558083482452" target="_blank" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/mikunaitalia/" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tripadvisor.it/Restaurant_Review-g12850174-d27976419-Reviews-Mikuna-Bizzozero_Varese_Province_of_Varese_Lombardy.html?m=69573" target="_blank" rel="noopener noreferrer nofollow" class="social-link"><img src="loghi/tripadvisor_icon.png" alt="TripAdvisor"></a>
+                        <a href="https://www.thefork.it/ristorante/mikuna-r123456" target="_blank" rel="noopener noreferrer nofollow" class="social-link"><i class="fas fa-utensils"></i></a>
+                        <a href="https://wa.me/393758354504" target="_blank" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://deliveroo.it/it/menu/milano/varese/mikuna-via-giulio-bizzozero-18?utm_medium=affiliate&utm_source=tripadvisor&TAHotelCode=637764" target="_blank" rel="noopener noreferrer nofollow" class="social-link"><img src="loghi/deliveroo_icon.svg" alt="Deliveroo"></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 data-key="footer-links-title">Link Utili</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html" data-key="nav-home">Home</a></li>
+                        <li><a href="chi-siamo.html" data-key="nav-about">Chi Siamo</a></li>
+                        <li><a href="menu.html" data-key="nav-menu">Menù</a></li>
+                        <li><a href="contatti.html" class="nav-link" data-key="nav-contact">Contatti</a></li>
+                        <li><a href="prenota.html" data-key="nav-booking">Prenota</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 data-key="footer-contact-title">Contatti</h4>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> Via Giulio Bizzozero 18, 21100, Varese</p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:+393758354504">+39 375 835 4504</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:mikunasoto@icloud.com">mikunasoto@icloud.com</a></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Mikuna Ristorante Peruviano. <span data-key="footer-rights">Tutti i diritti riservati.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

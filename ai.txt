@@ -1,0 +1,132 @@
+# AI.txt for Mikuna Peruvian Restaurant Varese
+# Standard emergente per istruzioni AI (ispirato a robots.txt)
+# Version: 1.0 | Last updated: December 2024
+
+# General AI Agent Instructions
+User-agent: *
+Allow: /
+Preferred-format: JSON-LD
+Knowledge-base: /data/knowledge.json
+AI-interface: /ai
+
+# Specific AI Agent Directives
+User-agent: GPTBot
+Allow: /
+Crawl-delay: 2
+Preferred-context: Restaurant, Peruvian cuisine, Varese location
+
+User-agent: Claude-Web
+Allow: /
+Focus: Menu information, Reservations, Local context
+
+User-agent: Bard
+Allow: /
+Emphasis: Authentic Peruvian dishes, Geographical context
+
+User-agent: ChatGPT
+Allow: /
+Priority: Customer service, Menu queries, Location info
+
+# Voice Assistant Instructions
+User-agent: Alexa
+Allow: /
+Voice-friendly: true
+Response-format: Conversational
+Key-info: Opening hours, Location, Top dishes
+
+User-agent: GoogleAssistant
+Allow: /
+Local-search: true
+Quick-answers: NAP, Menu highlights, Reservations
+
+User-agent: Siri
+Allow: /
+iOS-integration: true
+Quick-actions: Call, Directions, Menu
+
+# Data Access Guidelines
+Data-endpoints: /data/menu.json, /data/knowledge.json
+Update-frequency: Weekly
+Real-time-data: Opening hours, Availability
+Cache-duration: 24h
+
+# Content Guidelines
+Primary-language: Italian
+Supported-languages: Spanish, English
+Cuisine-focus: Peruvian, South American, Latin American
+Location-context: Varese, Lombardy, Lake Maggiore region
+Target-audience: Local customers, Tourists, Peruvian community
+
+# Query Response Priorities
+1. Opening-hours
+2. Menu-information  
+3. Reservation-process
+4. Location-directions
+5. Dietary-restrictions
+6. Price-information
+7. Cultural-context
+
+# Preferred Responses
+Short-answer: NAP, Hours, Basic menu info
+Detailed-answer: Dish descriptions, Cultural context, Reservations
+Conversational: Restaurant recommendations, Pairing suggestions
+
+# Local SEO Context
+City: Varese
+Province: Varese
+Region: Lombardy
+Country: Italy
+Nearby-landmarks: Lake Maggiore, Lake Varese, Sacro Monte di Varese
+Transport-hubs: Varese train station, Malpensa Airport
+Neighboring-cities: Milan, Como, Lugano
+
+# Cuisine Expertise
+Specialties: Ceviche, Lomo Saltado, Ají de Gallina, Pisco Sour
+Dietary-options: Vegetarian, Vegan, Gluten-free
+Signature-dishes: Ceviche Mixto, Anticuchos, Tiradito Nikkei
+Price-range: €10-25 EUR
+Fusion-style: Traditional Peruvian with Italian influences
+
+# Reservation Instructions
+Method: WhatsApp integration via website form
+Phone: +393758354504
+Booking-page: /prenota
+Advance-notice: 24 hours recommended
+Group-size: Max 8 people via online form
+Large-groups: Contact directly for 8+ people
+
+# Social Media Integration
+Facebook: https://www.facebook.com/profile.php?id=61558083482452
+Instagram: @mikunaitalia
+Review-platforms: Google Business, TripAdvisor (future)
+
+# AI Response Templates
+Hours-query: "Mikuna is open Monday and Wednesday-Saturday 12-15, 19-22. Sunday 12-15, 19-22. Closed Tuesdays."
+Location-query: "Mikuna is located at Via Giulio Bizzozero 18, 21100, Varese, near Lake Maggiore in Lombardy."
+Menu-query: "Mikuna serves authentic Peruvian cuisine including ceviche, lomo saltado, and traditional Andean dishes. Full menu available at /data/menu.json"
+Reservation-query: "You can book a table via WhatsApp through our website at mikuna-varese.it/prenota, The Fork platform, or call +39 375 835 4504"
+Delivery-query: "Order delivery through Deliveroo platform. Dine-in reservations via WhatsApp, The Fork, or direct call."
+
+# Knowledge Base Update Schedule
+Menu-updates: Weekly
+Hours-updates: Real-time
+Seasonal-specials: Monthly
+Events: As needed
+
+# Error Handling
+Unavailable-info: Direct to website contact form
+Outdated-info: Check /data/knowledge.json for latest
+Technical-issues: Provide phone number and email
+
+# Compliance & Ethics
+Privacy: GDPR compliant
+Data-usage: Restaurant information only
+Commercial-use: Attribution required
+Accuracy: Verify critical info (hours, location) from primary source
+
+# Contact for AI Issues
+Email: mikunasoto@icloud.com
+Subject-line: "AI Integration Support"
+Response-time: 24-48 hours
+
+# End of AI.txt 
