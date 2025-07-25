@@ -155,22 +155,28 @@ p {
 }
 
 .nav-container {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 0 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 80px;
+    min-width: 0;
+    width: 100vw;
 }
 
 .nav-logo {
-    text-decoration: none;
-    color: inherit;
-    transition: var(--transition);
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    min-width: 0;
+}
+
+.nav-logo h2 {
+    text-align: center;
+    width: 100%;
+}
+
+.nav-logo, .nav-logo h2, .nav-subtitle {
+    flex-shrink: 0;
 }
 
 .nav-logo:hover {
