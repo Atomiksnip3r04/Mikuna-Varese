@@ -64,6 +64,8 @@ Allow: /*.js
 Allow: /*.json
 Allow: /images/
 Allow: /data/
+Allow: /favicon.ico
+Allow: /loghi/favicon.png
 
 # Crawl delay for courtesy (optional)
 Crawl-delay: 1

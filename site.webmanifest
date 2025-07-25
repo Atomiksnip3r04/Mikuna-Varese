@@ -1,0 +1,21 @@
+{
+    "name": "Mikuna Ristorante Peruviano",
+    "short_name": "Mikuna",
+    "description": "Autentica cucina peruviana nel cuore di Varese",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#d4af37",
+    "icons": [
+        {
+            "src": "loghi/favicon.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "loghi/favicon.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+} 
