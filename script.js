@@ -1143,6 +1143,9 @@ class MikunaWebsite {
             }
         });
         
+        // Aggiorna i nomi dei piatti del carosello homepage
+        this.updateCarouselDishNames(lang);
+
         // Aggiorna l'attributo lang del documento
         document.documentElement.lang = lang;
     }
@@ -1159,6 +1162,36 @@ class MikunaWebsite {
         if (currentFlagSpan) {
             currentFlagSpan.textContent = flagMap[lang] || '🇮🇹';
         }
+    }
+    
+    // Nuova funzione: aggiorna i nomi dei piatti del carosello
+    updateCarouselDishNames(lang) {
+        const dishTranslations = {
+            'Ceviche': { it: 'Ceviche', es: 'Ceviche', en: 'Ceviche' },
+            'Lomo Saltado': { it: 'Lomo Saltado', es: 'Lomo Saltado', en: 'Lomo Saltado' },
+            'Ají de Gallina': { it: 'Ají de Gallina', es: 'Ají de Gallina', en: 'Ají de Gallina' },
+            'Anticuchos': { it: 'Anticuchos', es: 'Anticuchos', en: 'Anticuchos' },
+            'Pisco Sour': { it: 'Pisco Sour', es: 'Pisco Sour', en: 'Pisco Sour' },
+            'Chips Acevichados': { it: 'Chips Acevichados', es: 'Chips Acevichados', en: 'Chips Acevichados' },
+            'Chaufa de Pollo': { it: 'Chaufa de Pollo', es: 'Chaufa de Pollo', en: 'Chaufa de Pollo' },
+            'Causa Acevichada': { it: 'Causa Acevichada', es: 'Causa Acevichada', en: 'Causa Acevichada' },
+            'Arroz con Pato': { it: 'Arroz con Pato', es: 'Arroz con Pato', en: 'Arroz con Pato' },
+            'Torta Cioccolato': { it: 'Torta Cioccolato', es: 'Torta de Chocolate', en: 'Chocolate Cake' },
+            'Polpo Anticuchero': { it: 'Polpo Anticuchero', es: 'Pulpo Anticuchero', en: 'Anticucho Octopus' },
+            'Bis Ceviche + Chicharrón de Pescado': { it: 'Bis Ceviche + Chicharrón di Pesce', es: 'Bis Ceviche + Chicharrón de Pescado', en: 'Ceviche & Fried Fish' },
+            'Tris di Causa': { it: 'Tris di Causa', es: 'Trío de Causa', en: 'Causa Trio' },
+            'Pollo alla Brasa': { it: 'Pollo alla Brasa', es: 'Pollo a la Brasa', en: 'Peruvian Rotisserie Chicken' }
+        };
+        const dishCards = document.querySelectorAll('.dish-card .dish-info h3');
+        dishCards.forEach(h3 => {
+            // Estrai il nome base del piatto (prima del trattino)
+            const baseName = h3.textContent.split(' - ')[0].trim();
+            if (dishTranslations[baseName] && dishTranslations[baseName][lang]) {
+                // Mantieni la descrizione dopo il trattino se presente
+                const desc = h3.textContent.includes(' - ') ? ' - ' + h3.textContent.split(' - ')[1] : '';
+                h3.textContent = dishTranslations[baseName][lang] + desc;
+            }
+        });
     }
     
     // Carousel
