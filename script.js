@@ -1167,29 +1167,49 @@ class MikunaWebsite {
     // Nuova funzione: aggiorna i nomi dei piatti del carosello
     updateCarouselDishNames(lang) {
         const dishTranslations = {
+            'Tris di Causa': { it: 'Tris di Causa', es: 'Trío de Causa', en: 'Causa Trio' },
             'Ceviche': { it: 'Ceviche', es: 'Ceviche', en: 'Ceviche' },
+            'Bis Ceviche + Chicharrón de Pescado': { it: 'Bis Ceviche + Chicharrón di Pesce', es: 'Bis Ceviche + Chicharrón de Pescado', en: 'Ceviche & Fried Fish' },
+            'Chaufa de Pollo': { it: 'Chaufa de Pollo', es: 'Chaufa de Pollo', en: 'Chaufa de Pollo' },
+            'Chips Acevichados': { it: 'Chips Acevichados', es: 'Chips Acevichados', en: 'Chips Acevichados' },
             'Lomo Saltado': { it: 'Lomo Saltado', es: 'Lomo Saltado', en: 'Lomo Saltado' },
             'Ají de Gallina': { it: 'Ají de Gallina', es: 'Ají de Gallina', en: 'Ají de Gallina' },
             'Anticuchos': { it: 'Anticuchos', es: 'Anticuchos', en: 'Anticuchos' },
-            'Pisco Sour': { it: 'Pisco Sour', es: 'Pisco Sour', en: 'Pisco Sour' },
-            'Chips Acevichados': { it: 'Chips Acevichados', es: 'Chips Acevichados', en: 'Chips Acevichados' },
-            'Chaufa de Pollo': { it: 'Chaufa de Pollo', es: 'Chaufa de Pollo', en: 'Chaufa de Pollo' },
             'Causa Acevichada': { it: 'Causa Acevichada', es: 'Causa Acevichada', en: 'Causa Acevichada' },
             'Arroz con Pato': { it: 'Arroz con Pato', es: 'Arroz con Pato', en: 'Arroz con Pato' },
             'Torta Cioccolato': { it: 'Torta Cioccolato', es: 'Torta de Chocolate', en: 'Chocolate Cake' },
+            'Pisco Sour': { it: 'Pisco Sour', es: 'Pisco Sour', en: 'Pisco Sour' },
             'Polpo Anticuchero': { it: 'Polpo Anticuchero', es: 'Pulpo Anticuchero', en: 'Anticucho Octopus' },
-            'Bis Ceviche + Chicharrón de Pescado': { it: 'Bis Ceviche + Chicharrón di Pesce', es: 'Bis Ceviche + Chicharrón de Pescado', en: 'Ceviche & Fried Fish' },
-            'Tris di Causa': { it: 'Tris di Causa', es: 'Trío de Causa', en: 'Causa Trio' },
             'Pollo alla Brasa': { it: 'Pollo alla Brasa', es: 'Pollo a la Brasa', en: 'Peruvian Rotisserie Chicken' }
+        };
+        const descTranslations = {
+            'Antipasto tipico': { it: 'Antipasto tipico', es: 'Entrante típico', en: 'Typical starter' },
+            'Piatto di pesce fresco': { it: 'Piatto di pesce fresco', es: 'Plato de pescado fresco', en: 'Fresh fish dish' },
+            'Degustazione': { it: 'Degustazione', es: 'Degustación', en: 'Tasting' },
+            'Riso saltato peruviano': { it: 'Riso saltato peruviano', es: 'Arroz salteado peruano', en: 'Peruvian fried rice' },
+            'Chips di pesce': { it: 'Chips di pesce', es: 'Chips de pescado', en: 'Fish chips' },
+            'Manzo saltato': { it: 'Manzo saltato', es: 'Carne salteada', en: 'Sautéed beef' },
+            'Pollo in salsa cremosa': { it: 'Pollo in salsa cremosa', es: 'Pollo en salsa cremosa', en: 'Chicken in creamy sauce' },
+            'Spiedini peruviani': { it: 'Spiedini peruviani', es: 'Brochetas peruanas', en: 'Peruvian skewers' },
+            'Antipasto freddo': { it: 'Antipasto freddo', es: 'Entrante frío', en: 'Cold starter' },
+            'Riso con anatra': { it: 'Riso con anatra', es: 'Arroz con pato', en: 'Duck rice' },
+            'Dolce peruviano': { it: 'Dolce peruviano', es: 'Dulce peruano', en: 'Peruvian dessert' },
+            'Cocktail tipico': { it: 'Cocktail tipico', es: 'Cóctel típico', en: 'Typical cocktail' },
+            'Polpo speziato': { it: 'Polpo speziato', es: 'Pulpo especiado', en: 'Spiced octopus' },
+            'Pollo arrosto peruviano': { it: 'Pollo arrosto peruviano', es: 'Pollo asado peruano', en: 'Peruvian rotisserie chicken' }
         };
         const dishCards = document.querySelectorAll('.dish-card .dish-info h3');
         dishCards.forEach(h3 => {
             // Estrai il nome base del piatto (prima del trattino)
-            const baseName = h3.textContent.split(' - ')[0].trim();
-            if (dishTranslations[baseName] && dishTranslations[baseName][lang]) {
-                // Mantieni la descrizione dopo il trattino se presente
-                const desc = h3.textContent.includes(' - ') ? ' - ' + h3.textContent.split(' - ')[1] : '';
-                h3.textContent = dishTranslations[baseName][lang] + desc;
+            const parts = h3.textContent.split(' - ');
+            const baseName = parts[0].trim();
+            const desc = parts[1] ? parts[1].trim() : '';
+            let newName = dishTranslations[baseName] && dishTranslations[baseName][lang] ? dishTranslations[baseName][lang] : baseName;
+            let newDesc = descTranslations[desc] && descTranslations[desc][lang] ? descTranslations[desc][lang] : desc;
+            if (desc) {
+                h3.textContent = newName + ' - ' + newDesc;
+            } else {
+                h3.textContent = newName;
             }
         });
     }
