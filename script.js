@@ -202,7 +202,7 @@ const translations = {
         'menu-drinks-title': 'Bevande',
         'menu-drinks-subtitle': 'Cocktail tradizionali e bevande analcoliche del Perù',
         'drink-1-name': 'Pisco Sour',
-        'drink-1-desc': 'Il cocktail nazionale del Perù: pisco, lime, sciroppo, albume e angostura',
+        'drink-1-desc': 'Il cocktail nazionale del Perù: pisco, succo di lime, sciroppo, albume e angostura',
         'drink-2-name': 'Chicha Morada',
         'drink-2-desc': 'Bevanda tradizionale a base di mais viola, cannella, chiodi di garofano e frutta',
         'drink-3-name': 'Inca Kola',
@@ -277,8 +277,8 @@ const translations = {
         'faq-subtitle': 'Risposte alle domande più comuni sui nostri servizi',
         'faq-1-question': 'È necessario prenotare?',
         'faq-1-answer': 'Consigliamo sempre di prenotare, specialmente nei weekend e durante le festività. Puoi prenotare telefonicamente, via WhatsApp o attraverso il nostro form online.',
-        'faq-2-question': 'Il locale è accessibile a persone con disabilità?',
-        'faq-2-answer': 'Sì, il nostro ristorante è accessibile anche a persone con disabilità: ingresso senza barriere, servizi igienici accessibili e tavoli adatti. Per qualsiasi esigenza specifica, contattaci pure.',
+        'faq-2-question': 'Avete opzioni vegetariane e vegane?',
+        'faq-2-answer': 'Sì, offriamo diverse opzioni vegetariane come la Quinoa Chaufa e il Rocoto Relleno. Per le opzioni vegane, il nostro staff sarà felice di adattare alcuni piatti alle vostre esigenze.',
         'faq-3-question': 'Accettate carte di credito?',
         'faq-3-answer': 'Sì, accettiamo tutte le principali carte di credito (Visa, Mastercard, American Express) oltre ai pagamenti in contanti.',
         'faq-4-question': 'Organizzate eventi privati?',
@@ -891,8 +891,8 @@ const translations = {
         'faq-subtitle': 'Answers to the most common questions about our services',
         'faq-1-question': 'Is it necessary to book?',
         'faq-1-answer': 'We always recommend booking, especially on weekends and during holidays. You can book by phone, via WhatsApp or through our online form.',
-        'faq-2-question': 'Is the restaurant accessible for people with disabilities?',
-        'faq-2-answer': 'Yes, our restaurant is accessible for people with disabilities: step-free entrance, accessible restrooms and suitable tables. For any specific need, feel free to contact us.',
+        'faq-2-question': 'Do you have vegetarian and vegan options?',
+        'faq-2-answer': 'Yes, we offer several vegetarian options like Quinoa Chaufa and Rocoto Relleno. For vegan options, our staff will be happy to adapt some dishes to your needs.',
         'faq-3-question': 'Do you accept credit cards?',
         'faq-3-answer': 'Yes, we accept all major credit cards (Visa, Mastercard, American Express) in addition to cash payments.',
         'faq-4-question': 'Do you organize private events?',
@@ -1143,9 +1143,6 @@ class MikunaWebsite {
             }
         });
         
-        // Aggiorna i nomi dei piatti del carosello homepage
-        this.updateCarouselDishNames(lang);
-
         // Aggiorna l'attributo lang del documento
         document.documentElement.lang = lang;
     }
@@ -1162,56 +1159,6 @@ class MikunaWebsite {
         if (currentFlagSpan) {
             currentFlagSpan.textContent = flagMap[lang] || '🇮🇹';
         }
-    }
-    
-    // Nuova funzione: aggiorna i nomi dei piatti del carosello
-    updateCarouselDishNames(lang) {
-        const dishTranslations = {
-            'Tris di Causa': { it: 'Tris di Causa', es: 'Trío de Causa', en: 'Causa Trio' },
-            'Ceviche': { it: 'Ceviche', es: 'Ceviche', en: 'Ceviche' },
-            'Bis Ceviche + Chicharrón de Pescado': { it: 'Bis Ceviche + Chicharrón di Pesce', es: 'Bis Ceviche + Chicharrón de Pescado', en: 'Ceviche & Fried Fish' },
-            'Chaufa de Pollo': { it: 'Chaufa de Pollo', es: 'Chaufa de Pollo', en: 'Peruvian Fried Rice' },
-            'Chips Acevichados': { it: 'Chips Acevichados', es: 'Chips Acevichados', en: 'Ceviche-style Chips' },
-            'Lomo Saltado': { it: 'Lomo Saltado', es: 'Lomo Saltado', en: 'Lomo Saltado' },
-            'Ají de Gallina': { it: 'Ají de Gallina', es: 'Ají de Gallina', en: 'Ají de Gallina' },
-            'Anticuchos': { it: 'Anticuchos', es: 'Anticuchos', en: 'Anticuchos' },
-            'Causa Acevichada': { it: 'Causa Acevichada', es: 'Causa Acevichada', en: 'Ceviche-style Causa' },
-            'Arroz con Pato': { it: 'Arroz con Pato', es: 'Arroz con Pato', en: 'Duck Rice' },
-            'Torta Cioccolato': { it: 'Torta Cioccolato', es: 'Torta de Chocolate', en: 'Chocolate Cake' },
-            'Pisco Sour': { it: 'Pisco Sour', es: 'Pisco Sour', en: 'Pisco Sour' },
-            'Polpo Anticuchero': { it: 'Polpo Anticuchero', es: 'Pulpo Anticuchero', en: 'Anticucho Octopus' },
-            'Pollo alla Brasa': { it: 'Pollo alla Brasa', es: 'Pollo a la Brasa', en: 'Peruvian Rotisserie Chicken' }
-        };
-        const descTranslations = {
-            'Antipasto tipico': { it: 'Antipasto tipico', es: 'Entrante típico', en: 'Typical starter' },
-            'Piatto di pesce fresco': { it: 'Piatto di pesce fresco', es: 'Plato de pescado fresco', en: 'Fresh fish dish' },
-            'Degustazione': { it: 'Degustazione', es: 'Degustación', en: 'Tasting' },
-            'Riso saltato peruviano': { it: 'Riso saltato peruviano', es: 'Arroz salteado peruano', en: 'Peruvian fried rice' },
-            'Chips di pesce': { it: 'Chips di pesce', es: 'Chips de pescado', en: 'Fish chips' },
-            'Manzo saltato': { it: 'Manzo saltato', es: 'Carne salteada', en: 'Sautéed beef' },
-            'Pollo in salsa cremosa': { it: 'Pollo in salsa cremosa', es: 'Pollo en salsa cremosa', en: 'Chicken in creamy sauce' },
-            'Spiedini peruviani': { it: 'Spiedini peruviani', es: 'Brochetas peruanas', en: 'Peruvian skewers' },
-            'Antipasto freddo': { it: 'Antipasto freddo', es: 'Entrante frío', en: 'Cold starter' },
-            'Riso con anatra': { it: 'Riso con anatra', es: 'Arroz con pato', en: 'Duck rice' },
-            'Dolce peruviano': { it: 'Dolce peruviano', es: 'Dulce peruano', en: 'Peruvian dessert' },
-            'Cocktail tipico': { it: 'Cocktail tipico', es: 'Cóctel típico', en: 'Signature cocktail' },
-            'Polpo speziato': { it: 'Polpo speziato', es: 'Pulpo especiado', en: 'Spiced octopus' },
-            'Pollo arrosto peruviano': { it: 'Pollo arrosto peruviano', es: 'Pollo asado peruano', en: 'Peruvian rotisserie chicken' }
-        };
-        const dishCards = document.querySelectorAll('.dish-card .dish-info h3');
-        dishCards.forEach(h3 => {
-            // Estrai il nome base del piatto (prima del trattino)
-            const parts = h3.textContent.split(' - ');
-            const baseName = parts[0].trim();
-            const desc = parts[1] ? parts[1].trim() : '';
-            let newName = dishTranslations[baseName] && dishTranslations[baseName][lang] ? dishTranslations[baseName][lang] : baseName;
-            let newDesc = descTranslations[desc] && descTranslations[desc][lang] ? descTranslations[desc][lang] : desc;
-            if (desc) {
-                h3.textContent = newName + ' - ' + newDesc;
-            } else {
-                h3.textContent = newName;
-            }
-        });
     }
     
     // Carousel

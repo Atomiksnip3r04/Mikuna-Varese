@@ -147,8 +147,6 @@ p {
     z-index: 1000;
     transition: var(--transition);
     border-bottom: 1px solid var(--border-gold);
-    padding-right: 0 !important;
-    margin-right: 0 !important;
 }
 
 .navbar.scrolled {
@@ -157,30 +155,22 @@ p {
 }
 
 .nav-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-width: 0;
-    width: 100%;
-    padding-right: 0 !important;
-    margin-right: 0 !important;
+    height: 80px;
 }
 
 .nav-logo {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    min-width: 0;
-}
-
-.nav-logo h2 {
-    text-align: center;
-    width: 100%;
-}
-
-.nav-logo, .nav-logo h2, .nav-subtitle {
-    flex-shrink: 0;
 }
 
 .nav-logo:hover {
@@ -218,8 +208,6 @@ p {
     display: flex;
     align-items: center;
     gap: 2rem;
-    padding-right: 0 !important;
-    margin-right: 0 !important;
 }
 
 .nav-link {
@@ -261,8 +249,6 @@ p {
 /* Language Selector */
 .language-selector {
     position: relative;
-    margin-right: 0 !important;
-    padding-right: 0 !important;
 }
 
 .lang-btn {
@@ -363,8 +349,6 @@ p {
     flex-direction: column;
     cursor: pointer;
     gap: 4px;
-    margin-right: 0 !important;
-    padding-right: 0 !important;
 }
 
 .hamburger span {
@@ -983,13 +967,13 @@ section {
         gap: 1rem;
         width: 100%;
         /* justify-content: center; */
-        padding-left: 5%;
-        padding-right: 5%;
+        padding-left: calc((100vw - 90vw) / 2);
+        padding-right: calc((100vw - 90vw) / 2);
         box-sizing: content-box;
     }
     .dish-card {
-        min-width: 90%;
-        max-width: 90%;
+        min-width: 90vw;
+        max-width: 90vw;
         margin-left: 0;
         margin-right: 0;
     }
@@ -5301,284 +5285,3 @@ textarea:focus {
     max-width: 95%;
   }
 }
-
-/* --- INIZIO OTTIMIZZAZIONI RESPONSIVE PER SCHERMI PICCOLI --- */
-@media (max-width: 400px) {
-  html, body {
-    overflow-x: hidden !important;
-    width: 100%;
-  }
-  .container {
-    padding-left: 4px;
-    padding-right: 4px;
-  }
-  .nav-container {
-    padding-left: 2px;
-    padding-right: 2px;
-    min-width: 0;
-  }
-  .navbar {
-    min-width: 0;
-  }
-  .nav-menu {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-  .hamburger {
-    margin-right: 2px;
-  }
-  .dishes-carousel, .carousel-container {
-    padding-left: 0;
-    padding-right: 0;
-    overflow-x: auto !important;
-  }
-  .carousel-track {
-    gap: 0.5rem;
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .dish-card {
-    min-width: 92vw;
-    max-width: 92vw;
-  }
-  .carousel-btn {
-    width: 34px;
-    height: 34px;
-    font-size: 0.9rem;
-  }
-  .footer-content {
-    gap: 0.5rem;
-  }
-  .social-links {
-    gap: 0.3rem;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .social-link {
-    width: 32px;
-    height: 32px;
-    font-size: 1rem;
-  }
-}
-@media (max-width: 375px) {
-  .dish-card {
-    min-width: 96vw;
-    max-width: 96vw;
-  }
-  .carousel-btn {
-    width: 28px;
-    height: 28px;
-    font-size: 0.8rem;
-  }
-  .footer-content {
-    gap: 0.2rem;
-  }
-  .social-link {
-    width: 28px;
-    height: 28px;
-    font-size: 0.9rem;
-  }
-}
-/* --- FINE OTTIMIZZAZIONI RESPONSIVE PER SCHERMI PICCOLI --- */
-
-/* --- INIZIO FIX BOTTONI HERO PER MOBILE PICCOLO --- */
-@media (max-width: 400px) {
-  .hero-buttons {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.7rem;
-    width: 100%;
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .btn, .btn-primary, .btn-secondary {
-    min-width: unset;
-    width: 96vw;
-    max-width: 98vw;
-    box-sizing: border-box;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    font-size: 1.1rem;
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-/* --- FINE FIX BOTTONI HERO PER MOBILE PICCOLO --- */
-
-/* --- INIZIO FIX ESTREMO PER SCHERMI SOTTO 393px --- */
-@media (max-width: 392px) {
-  html, body, .hero, .main, .page-hero {
-    width: 100% !important;
-    min-width: 100% !important;
-    max-width: 100% !important;
-    overflow-x: hidden !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-  .hero-background, .page-hero-background, .hero-overlay, .page-hero-overlay, .hero-content {
-    width: 100% !important;
-    min-width: 100% !important;
-    max-width: 100% !important;
-    left: 0 !important;
-    right: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    box-sizing: border-box !important;
-  }
-  .hero-background, .page-hero-background {
-    background-size: cover !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    left: 0 !important;
-    right: 0 !important;
-    width: 100% !important;
-    min-width: 100% !important;
-    max-width: 100% !important;
-  }
-  .hero-content {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    width: 100% !important;
-    min-width: 100% !important;
-    max-width: 100% !important;
-  }
-}
-/* --- FINE FIX ESTREMO PER SCHERMI SOTTO 393px --- */
-
-/* --- INIZIO FIX DEFINITIVO SFONDI E FULL WIDTH SU SCHERMI PICCOLI --- */
-@media (max-width: 392px) {
-  html, body, .container, .main, .footer, .navbar, .nav-container, .footer-content, .footer-section {
-    width: 100% !important;
-    min-width: 100% !important;
-    max-width: 100% !important;
-    overflow-x: hidden !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    box-sizing: border-box !important;
-  }
-  .hero, .page-hero {
-    width: 100% !important;
-    min-width: 100% !important;
-    max-width: 100% !important;
-    height: 100vh !important;
-    min-height: 100vh !important;
-    max-height: 100vh !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    box-sizing: border-box !important;
-    position: relative !important;
-    left: 0 !important;
-    right: 0 !important;
-  }
-  .hero-background, .page-hero-background, .hero-overlay, .page-hero-overlay {
-    position: fixed !important;
-    left: 0 !important;
-    right: 0 !important;
-    top: 0 !important;
-    width: 100% !important;
-    min-width: 100% !important;
-    max-width: 100% !important;
-    height: 100vh !important;
-    min-height: 100vh !important;
-    max-height: 100vh !important;
-    background-size: 100vw 100vh !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    box-sizing: border-box !important;
-    z-index: -2 !important;
-  }
-  .hero-content, .page-hero-content {
-    width: 100% !important;
-    min-width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-    padding: 0 0.5rem !important;
-    box-sizing: border-box !important;
-  }
-}
-/* --- FINE FIX DEFINITIVO SFONDI E FULL WIDTH SU SCHERMI PICCOLI --- */
-
-/* --- INIZIO FIX AVANZATO OVERFLOW E RESPONSIVE SOTTO 388px --- */
-* {
-  box-sizing: border-box !important;
-}
-img, svg, picture, video {
-  max-width: 100% !important;
-  height: auto !important;
-  display: block !important;
-}
-html, body {
-  overflow-x: hidden !important;
-  width: 100% !important;
-  min-width: 100% !important;
-}
-.container, .footer, .navbar, .nav-container, .footer-content, .footer-section, .main, .menu-navigation, .menu-nav-links, .carousel-container, .carousel-track, .dishes-carousel, .social-links, .menu-nav-link, .footer .social-link, .footer .social-link img, .footer .social-link i {
-  width: 100% !important;
-  max-width: 100% !important;
-  min-width: 0 !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  overflow-x: hidden !important;
-  flex-shrink: 1 !important;
-  word-break: break-word !important;
-}
-a, p, span, h1, h2, h3, h4, h5, h6 {
-  word-break: break-word !important;
-  overflow-wrap: break-word !important;
-}
-@media (max-width: 388px) {
-  .nav-container, .nav-logo, .footer-content, .footer-section, .menu-navigation, .menu-nav-links, .carousel-container, .carousel-track, .dishes-carousel, .social-links {
-    width: 100% !important;
-    min-width: 0 !important;
-    max-width: 100% !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    gap: 0.1rem !important;
-  }
-  .nav-logo h2 {
-    font-size: 1.1rem !important;
-  }
-  .nav-logo, .nav-logo h2, .nav-subtitle {
-    flex-shrink: 1 !important;
-  }
-  .menu-nav-link {
-    min-width: 60px !important;
-    font-size: 0.9rem !important;
-    padding: 0.2rem 0.4rem !important;
-    margin: 0 !important;
-  }
-  .footer .social-link, .footer .social-link img, .footer .social-link i {
-    width: 20px !important;
-    height: 20px !important;
-    font-size: 1rem !important;
-    min-width: 20px !important;
-    min-height: 20px !important;
-    max-width: 20px !important;
-    max-height: 20px !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-  .hamburger {
-    width: 20px !important;
-    height: 20px !important;
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-  .carousel-btn {
-    width: 20px !important;
-    height: 20px !important;
-    font-size: 0.9rem !important;
-    padding: 0 !important;
-  }
-  .dish-card {
-    min-width: 98vw !important;
-    max-width: 98vw !important;
-  }
-}
-/* --- FINE FIX AVANZATO OVERFLOW E RESPONSIVE SOTTO 388px --- */
