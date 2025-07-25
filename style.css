@@ -5285,3 +5285,82 @@ textarea:focus {
     max-width: 95%;
   }
 }
+
+/* --- INIZIO OTTIMIZZAZIONI RESPONSIVE PER SCHERMI PICCOLI --- */
+@media (max-width: 400px) {
+  html, body {
+    overflow-x: hidden !important;
+    width: 100vw;
+  }
+  .container {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+  .nav-container {
+    padding-left: 2px;
+    padding-right: 2px;
+    min-width: 0;
+  }
+  .navbar {
+    min-width: 0;
+  }
+  .nav-menu {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .hamburger {
+    margin-right: 2px;
+  }
+  .dishes-carousel, .carousel-container {
+    padding-left: 0;
+    padding-right: 0;
+    overflow-x: auto !important;
+  }
+  .carousel-track {
+    gap: 0.5rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .dish-card {
+    min-width: 92vw;
+    max-width: 92vw;
+  }
+  .carousel-btn {
+    width: 34px;
+    height: 34px;
+    font-size: 0.9rem;
+  }
+  .footer-content {
+    gap: 0.5rem;
+  }
+  .social-links {
+    gap: 0.3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .social-link {
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 375px) {
+  .dish-card {
+    min-width: 96vw;
+    max-width: 96vw;
+  }
+  .carousel-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 0.8rem;
+  }
+  .footer-content {
+    gap: 0.2rem;
+  }
+  .social-link {
+    width: 28px;
+    height: 28px;
+    font-size: 0.9rem;
+  }
+}
+/* --- FINE OTTIMIZZAZIONI RESPONSIVE PER SCHERMI PICCOLI --- */
