@@ -147,6 +147,8 @@ p {
     z-index: 1000;
     transition: var(--transition);
     border-bottom: 1px solid var(--border-gold);
+    padding-right: 0 !important;
+    margin-right: 0 !important;
 }
 
 .navbar.scrolled {
@@ -160,6 +162,8 @@ p {
     justify-content: space-between;
     min-width: 0;
     width: 100%;
+    padding-right: 0 !important;
+    margin-right: 0 !important;
 }
 
 .nav-logo {
@@ -214,6 +218,8 @@ p {
     display: flex;
     align-items: center;
     gap: 2rem;
+    padding-right: 0 !important;
+    margin-right: 0 !important;
 }
 
 .nav-link {
@@ -255,6 +261,8 @@ p {
 /* Language Selector */
 .language-selector {
     position: relative;
+    margin-right: 0 !important;
+    padding-right: 0 !important;
 }
 
 .lang-btn {
@@ -355,6 +363,8 @@ p {
     flex-direction: column;
     cursor: pointer;
     gap: 4px;
+    margin-right: 0 !important;
+    padding-right: 0 !important;
 }
 
 .hamburger span {
