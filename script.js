@@ -1270,7 +1270,9 @@ class MikunaWebsite {
         const handleStart = (e) => {
             isDragging = true;
             startX = e.touches ? e.touches[0].clientX : e.clientX;
+            startY = e.touches ? e.touches[0].clientY : e.clientY;
             currentX = startX; // Inizializza currentX per evitare salti
+            currentY = startY; // Inizializza currentY per evitare salti
             startTransform = getTranslateX();
             this.carouselTrack.style.transition = 'none'; // Disabilita transizioni durante il drag
             this.stopAutoSlide();
@@ -1278,10 +1280,24 @@ class MikunaWebsite {
     
         const handleMove = (e) => {
             if (!isDragging) return;
-            // preventDefault() previene lo scroll della pagina mentre si scorre il carosello
-            e.preventDefault(); 
+            
             currentX = e.touches ? e.touches[0].clientX : e.clientX;
             const deltaX = currentX - startX;
+            
+            // Controlla se il movimento è principalmente orizzontale
+            if (e.touches) {
+                currentY = e.touches[0].clientY;
+                const deltaY = Math.abs(currentY - startY);
+                const deltaXAbs = Math.abs(deltaX);
+                
+                // Se il movimento è più orizzontale che verticale, previeni lo scroll
+                if (deltaXAbs > deltaY) {
+                    e.preventDefault();
+                }
+            } else {
+                e.preventDefault();
+            }
+            
             this.carouselTrack.style.transform = `translateX(${startTransform + deltaX}px)`;
         };
     
@@ -1719,7 +1735,9 @@ class FAQCarousel {
         
         // Touch/mouse events for dragging
         let startX = 0;
+        let startY = 0;
         let currentX = 0;
+        let currentY = 0;
         let isDragging = false;
         let startTransform = 0;
         
@@ -1727,6 +1745,7 @@ class FAQCarousel {
             isDragging = true;
             this.isUserInteracting = true;
             startX = e.type === 'mousedown' ? e.clientX : e.touches[0].clientX;
+            startY = e.type === 'mousedown' ? e.clientY : e.touches[0].clientY;
             
             const currentTransform = getComputedStyle(this.track).transform;
             const matrix = new DOMMatrix(currentTransform);
@@ -1738,12 +1757,25 @@ class FAQCarousel {
         
         const handleMove = (e) => {
             if (!isDragging) return;
-            e.preventDefault();
             
             currentX = e.type === 'mousemove' ? e.clientX : e.touches[0].clientX;
             const deltaX = currentX - startX;
-            const newTransform = startTransform + deltaX;
             
+            // Controlla se il movimento è principalmente orizzontale
+            if (e.touches) {
+                currentY = e.touches[0].clientY;
+                const deltaY = Math.abs(currentY - startY);
+                const deltaXAbs = Math.abs(deltaX);
+                
+                // Se il movimento è più orizzontale che verticale, previeni lo scroll
+                if (deltaXAbs > deltaY) {
+                    e.preventDefault();
+                }
+            } else {
+                e.preventDefault();
+            }
+            
+            const newTransform = startTransform + deltaX;
             this.track.style.transform = `translateX(${newTransform}px)`;
         };
         
