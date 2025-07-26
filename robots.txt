@@ -1,73 +1,25 @@
-# robots.txt per www.mikunaitalia.it
-# Ottimizzato SEO 2024-2025 e AI Readability
+# ------------------------------------------------------------
+# robots.txt per https://www.mikunaitalia.it
+# Ultimo aggiornamento: 2024-05-21
+# Obiettivo: Massimizzare la scansione utile, bloccando solo il superfluo.
+# ------------------------------------------------------------
 
+# Valido per tutti i crawler
 User-agent: *
-Disallow: /admin/
+
+# Blocco aree standard di WordPress e directory sensibili
 Disallow: /wp-admin/
-Disallow: /.git/
-Disallow: /node_modules/
-Allow: /
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /private/
 
-# Sitemap aggiornata
+# Blocco del funnel di acquisto e dei risultati di ricerca interna
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /?s=
+
+# Permetti la scansione di admin-ajax per il corretto rendering delle pagine
+Allow: /wp-admin/admin-ajax.php
+
+# Sitemap (può stare in cima o in fondo, è indifferente)
 Sitemap: https://www.mikunaitalia.it/sitemap.xml
-
-# AI Instructions File (aggiornato)
-AI-instructions: https://www.mikunaitalia.it/ai.txt
-AI-interface: https://www.mikunaitalia.it/ai
-Knowledge-base: https://www.mikunaitalia.it/data/knowledge.json
-
-# Allow AI crawlers and semantic agents
-User-agent: GPTBot
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
-User-agent: CCBot
-Allow: /
-
-User-agent: anthropic-ai
-Allow: /
-
-User-agent: Claude-Web
-Allow: /
-
-# Allow social media crawlers
-User-agent: facebookexternalhit
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: LinkedInBot
-Allow: /
-
-# Allow search engines
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: YandexBot
-Allow: /
-
-User-agent: DuckDuckBot
-Allow: /
-
-# Allow access to important resources
-Allow: /style.css
-Allow: /script.js
-Allow: /*.css
-Allow: /*.js
-Allow: /*.json
-Allow: /images/
-Allow: /data/
-Allow: /favicon.ico
-Allow: /loghi/favicon.png
-
-# Crawl delay per cortesia
-Crawl-delay: 1
-
-# Host directive aggiornata
-Host: www.mikunaitalia.it 
