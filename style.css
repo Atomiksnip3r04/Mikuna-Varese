@@ -506,17 +506,20 @@ section {
     position: relative;
     max-width: 100%;
     overflow: hidden;
+    touch-action: pan-y; /* Permette lo scroll verticale */
 }
 
 .carousel-container {
     overflow: hidden;
     border-radius: var(--border-radius);
+    touch-action: pan-y; /* Permette lo scroll verticale */
 }
 
 .carousel-track {
     display: flex;
     transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     gap: 2rem;
+    touch-action: pan-y; /* Permette lo scroll verticale */
 }
 
 .dish-card {
@@ -526,6 +529,7 @@ section {
     overflow: hidden;
     box-shadow: 0 8px 30px var(--shadow-light);
     transition: var(--transition);
+    touch-action: pan-y; /* Permette lo scroll verticale */
 }
 
 .dish-card:hover {
@@ -1929,6 +1933,7 @@ section {
     position: relative;
     margin-bottom: 4rem;
     padding: 0 80px; /* Spazio per i bottoni */
+    touch-action: pan-y; /* Permette lo scroll verticale */
 }
 
 .faq-carousel {
@@ -1937,6 +1942,7 @@ section {
     width: 100%;
     height: auto;
     border-radius: var(--border-radius);
+    touch-action: pan-y; /* Permette lo scroll verticale */
 }
 
 .faq-carousel-track {
@@ -1945,6 +1951,7 @@ section {
     gap: 2rem;
     padding: 1rem 0;
     align-items: center;
+    touch-action: pan-y; /* Permette lo scroll verticale */
 }
 
 .faq-carousel-track.dragging {
@@ -1967,6 +1974,7 @@ section {
     justify-content: space-between;
     opacity: 0.4;
     transform: scale(0.9);
+    touch-action: pan-y; /* Permette lo scroll verticale */
 }
 
 .faq-item.active {
