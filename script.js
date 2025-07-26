@@ -1256,7 +1256,9 @@ class MikunaWebsite {
         if (!this.carouselTrack) return;
     
         let startX = 0;
+        let startY = 0;
         let currentX = 0;
+        let currentY = 0;
         let isDragging = false;
         let startTransform = 0;
     
