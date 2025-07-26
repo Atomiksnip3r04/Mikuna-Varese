@@ -239,32 +239,32 @@
 
             <div class="nav-extras">
                 <div class="language-selector">
-                    <button id="lang-btn" class="lang-btn">
-                        <span id="current-flag" class="current-flag">🇮🇹</span>
+                    <button id="lang-btn" class="lang-btn" aria-label="Seleziona lingua del sito" aria-expanded="false" aria-haspopup="true">
+                        <span id="current-flag" class="current-flag" aria-hidden="true">🇮🇹</span>
                         <span id="current-lang">IT</span>
-                        <i class="fas fa-chevron-down"></i>
+                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
                     </button>
-                    <div class="lang-dropdown" id="lang-dropdown">
-                        <button onclick="changeLanguage('it')">
-                            <span class="flag-icon">🇮🇹</span>
+                    <div class="lang-dropdown" id="lang-dropdown" role="menu" aria-labelledby="lang-btn">
+                        <button onclick="changeLanguage('it')" role="menuitem" aria-label="Cambia lingua in Italiano">
+                            <span class="flag-icon" aria-hidden="true">🇮🇹</span>
                             <span>Italiano</span>
                         </button>
-                        <button onclick="changeLanguage('es')">
-                            <span class="flag-icon">🇵🇪</span>
+                        <button onclick="changeLanguage('es')" role="menuitem" aria-label="Cambia lingua in Spagnolo">
+                            <span class="flag-icon" aria-hidden="true">🇵🇪</span>
                             <span>Español</span>
                         </button>
-                        <button onclick="changeLanguage('en')">
-                            <span class="flag-icon">🇬🇧</span>
+                        <button onclick="changeLanguage('en')" role="menuitem" aria-label="Cambia lingua in Inglese">
+                            <span class="flag-icon" aria-hidden="true">🇬🇧</span>
                             <span>English</span>
                         </button>
                     </div>
                 </div>
                 
-                <div class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+                <button class="hamburger" id="hamburger" aria-label="Apri menu di navigazione" aria-expanded="false" aria-controls="nav-menu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </button>
             </div>
         </div>
     </nav>
@@ -300,9 +300,9 @@
                 </div>
                 
             </div>
-            <div class="hero-scroll" role="button" aria-label="Scorri verso il basso" tabindex="0">
+            <button class="hero-scroll" aria-label="Scorri verso il basso per vedere i contenuti" tabindex="0">
                 <i class="fas fa-chevron-down" aria-hidden="true"></i>
-            </div>
+            </button>
         </section>
 
         <!-- Specialties Section -->
@@ -418,11 +418,11 @@
                     </div>
                 </div>
                 
-                <button class="carousel-btn carousel-btn-prev" id="carousel-prev">
-                    <i class="fas fa-chevron-left"></i>
+                <button class="carousel-btn carousel-btn-prev" id="carousel-prev" aria-label="Mostra piatti precedenti del carosello">
+                    <i class="fas fa-chevron-left" aria-hidden="true"></i>
                 </button>
-                <button class="carousel-btn carousel-btn-next" id="carousel-next">
-                    <i class="fas fa-chevron-right"></i>
+                <button class="carousel-btn carousel-btn-next" id="carousel-next" aria-label="Mostra piatti successivi del carosello">
+                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
                 </button>
                 
                 <div class="carousel-dots" id="carousel-dots"></div>
