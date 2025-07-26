@@ -5387,3 +5387,136 @@ textarea:focus {
     line-height: 1.2;
     }
 }
+
+/* Stili specifici per ogni piattaforma social */
+.social-link.facebook-link:hover {
+    background: #1877f2;
+    box-shadow: 0 4px 15px rgba(24, 119, 242, 0.4);
+}
+
+.social-link.instagram-link:hover {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    box-shadow: 0 4px 15px rgba(220, 39, 67, 0.4);
+}
+
+.social-link.tiktok-link:hover {
+    background: #000000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.social-link.tripadvisor-link:hover {
+    background: #00af87;
+    box-shadow: 0 4px 15px rgba(0, 175, 135, 0.4);
+}
+
+.social-link.thefork-link:hover {
+    background: #005fda;
+    box-shadow: 0 4px 15px rgba(0, 95, 218, 0.4);
+}
+
+.social-link.whatsapp-link:hover {
+    background: #25d366;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+}
+
+.social-link.deliveroo-link:hover {
+    background: #00ccbc;
+    box-shadow: 0 4px 15px rgba(0, 204, 188, 0.4);
+}
+
+/* Animazioni per i social link */
+.social-link {
+    position: relative;
+    overflow: hidden;
+}
+
+.social-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.social-link:hover::before {
+    left: 100%;
+}
+
+/* Tooltip per i social link */
+.social-link {
+    position: relative;
+}
+
+.social-link::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    margin-bottom: 0.5rem;
+}
+
+.social-link::after {
+    content: '';
+}
+
+.social-link:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Responsive per i social link */
+@media (max-width: 768px) {
+    .social-links {
+        gap: 0.75rem;
+    }
+    
+    .social-link {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .social-link i {
+        font-size: 0.9rem;
+    }
+    
+    .social-link img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .social-links {
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .social-link {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .social-link i {
+        font-size: 0.8rem;
+    }
+    
+    .social-link img {
+        width: 18px;
+        height: 18px;
+    }
+}

@@ -97,6 +97,10 @@
                 "sameAs": [
                     "https://www.facebook.com/profile.php?id=61558083482452",
                     "https://www.instagram.com/mikunaitalia/",
+                    "https://www.tiktok.com/@mikunaitalia",
+                    "https://www.tripadvisor.it/Restaurant_Review-g12850174-d27976419-Reviews-Mikuna-Bizzozero_Varese_Province_of_Varese_Lombardy.html",
+                    "https://www.thefork.it/ristorante/mikuna-r836600",
+                    "https://deliveroo.it/it/menu/milano/varese/mikuna-via-giulio-bizzozero-18",
                     "https://en.wikipedia.org/wiki/Peruvian_cuisine",
                     "https://www.wikidata.org/wiki/Q748945",
                     "https://dbpedia.org/resource/Peruvian_cuisine",
@@ -191,6 +195,113 @@
                     "https://www.wikidata.org/wiki/Q748945",
                     "https://dbpedia.org/resource/Peruvian_cuisine"
                 ]
+            }
+        ]
+    }
+    </script>
+    
+    <!-- Social Media Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Organization",
+                "@id": "https://mikuna-varese.it/#organization",
+                "name": "Mikuna Ristorante Peruviano",
+                "url": "https://mikuna-varese.it",
+                "sameAs": [
+                    {
+                        "@type": "WebPage",
+                        "name": "Mikuna Facebook",
+                        "url": "https://www.facebook.com/profile.php?id=61558083482452",
+                        "description": "Pagina Facebook ufficiale di Mikuna Ristorante Peruviano Varese",
+                        "inLanguage": "it"
+                    },
+                    {
+                        "@type": "WebPage",
+                        "name": "Mikuna Instagram",
+                        "url": "https://www.instagram.com/mikunaitalia/",
+                        "description": "Profilo Instagram ufficiale di Mikuna con foto dei piatti e stories",
+                        "inLanguage": "it"
+                    },
+                    {
+                        "@type": "WebPage",
+                        "name": "Mikuna TikTok",
+                        "url": "https://www.tiktok.com/@mikunaitalia",
+                        "description": "Canale TikTok di Mikuna con video della cucina peruviana",
+                        "inLanguage": "it"
+                    }
+                ]
+            },
+            {
+                "@type": "Review",
+                "@id": "https://mikuna-varese.it/#tripadvisor-reviews",
+                "name": "Mikuna TripAdvisor Reviews",
+                "url": "https://www.tripadvisor.it/Restaurant_Review-g12850174-d27976419-Reviews-Mikuna-Bizzozero_Varese_Province_of_Varese_Lombardy.html",
+                "description": "Recensioni e valutazioni di Mikuna Ristorante Peruviano su TripAdvisor",
+                "reviewBody": "Recensioni dei clienti su TripAdvisor",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "4.5",
+                    "bestRating": "5"
+                },
+                "author": {
+                    "@type": "Organization",
+                    "name": "TripAdvisor"
+                },
+                "itemReviewed": {
+                    "@type": "Restaurant",
+                    "name": "Mikuna",
+                    "url": "https://mikuna-varese.it"
+                }
+            },
+            {
+                "@type": "ReservationService",
+                "@id": "https://mikuna-varese.it/#thefork-reservation",
+                "name": "Mikuna TheFork",
+                "url": "https://www.thefork.it/ristorante/mikuna-r836600",
+                "description": "Prenota online il tuo tavolo da Mikuna Ristorante Peruviano su TheFork",
+                "serviceType": "Restaurant Reservation",
+                "provider": {
+                    "@type": "Organization",
+                    "name": "TheFork"
+                },
+                "areaServed": {
+                    "@type": "City",
+                    "name": "Varese"
+                }
+            },
+            {
+                "@type": "ContactPoint",
+                "@id": "https://mikuna-varese.it/#whatsapp-contact",
+                "name": "Mikuna WhatsApp",
+                "url": "https://wa.me/393758354504",
+                "description": "Contatta Mikuna su WhatsApp per prenotazioni e informazioni",
+                "contactType": "customer service",
+                "telephone": "+393758354504",
+                "availableLanguage": ["it", "es"],
+                "areaServed": {
+                    "@type": "City",
+                    "name": "Varese"
+                }
+            },
+            {
+                "@type": "FoodDeliveryService",
+                "@id": "https://mikuna-varese.it/#deliveroo-delivery",
+                "name": "Mikuna Deliveroo",
+                "url": "https://deliveroo.it/it/menu/milano/varese/mikuna-via-giulio-bizzozero-18",
+                "description": "Ordina cibo peruviano a domicilio da Mikuna con Deliveroo",
+                "serviceType": "Food Delivery",
+                "provider": {
+                    "@type": "Organization",
+                    "name": "Deliveroo"
+                },
+                "areaServed": {
+                    "@type": "City",
+                    "name": "Varese"
+                },
+                "hasMenu": "https://mikuna-varese.it/menu"
             }
         ]
     }
@@ -613,24 +724,122 @@
                         Autentica cucina peruviana nel cuore di Varese. 
                         Vieni a scoprire i sapori del Perù, dal nostro ceviche al lomo saltado, in un ambiente accogliente e familiare.
                     </p>
-                    <div class="social-links" itemprop="sameAs">
-                        <a href="https://www.facebook.com/profile.php?id=61558083482452" target="_blank" rel="noopener" class="social-link" aria-label="Segui Mikuna su Facebook">
+                    <div class="social-links" itemprop="sameAs" itemscope itemtype="https://schema.org/ItemList">
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/profile.php?id=61558083482452" 
+                           target="_blank" 
+                           rel="noopener" 
+                           class="social-link facebook-link" 
+                           aria-label="Segui Mikuna su Facebook - Foto dei piatti e aggiornamenti"
+                           title="Seguici su Facebook"
+                           itemscope 
+                           itemtype="https://schema.org/WebPage"
+                           itemprop="itemListElement">
+                            <meta itemprop="name" content="Mikuna Facebook">
+                            <meta itemprop="description" content="Pagina Facebook ufficiale di Mikuna Ristorante Peruviano Varese">
+                            <meta itemprop="url" content="https://www.facebook.com/profile.php?id=61558083482452">
                             <i class="fab fa-facebook" aria-hidden="true"></i>
                         </a>
-                        <a href="https://www.instagram.com/mikunaitalia/" target="_blank" rel="noopener" class="social-link" aria-label="Segui Mikuna su Instagram">
+                        
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/mikunaitalia/" 
+                           target="_blank" 
+                           rel="noopener" 
+                           class="social-link instagram-link" 
+                           aria-label="Segui Mikuna su Instagram - Stories e contenuti esclusivi della cucina peruviana"
+                           title="Seguici su Instagram"
+                           itemscope 
+                           itemtype="https://schema.org/WebPage"
+                           itemprop="itemListElement">
+                            <meta itemprop="name" content="Mikuna Instagram">
+                            <meta itemprop="description" content="Profilo Instagram ufficiale di Mikuna con foto dei piatti e stories">
+                            <meta itemprop="url" content="https://www.instagram.com/mikunaitalia/">
                             <i class="fab fa-instagram" aria-hidden="true"></i>
                         </a>
-                        <a href="https://www.tripadvisor.it/Restaurant_Review-g12850174-d27976419-Reviews-Mikuna-Bizzozero_Varese_Province_of_Varese_Lombardy.html?m=69573" target="_blank" rel="noopener noreferrer nofollow" class="social-link" aria-label="Leggi le recensioni su TripAdvisor">
-                            <img src="loghi/tripadvisor_icon.png" alt="TripAdvisor" aria-hidden="true">
+                        
+                        <!-- TikTok -->
+                        <a href="https://www.tiktok.com/@mikunaitalia" 
+                           target="_blank" 
+                           rel="noopener" 
+                           class="social-link tiktok-link" 
+                           aria-label="Segui Mikuna su TikTok - Video della cucina peruviana e behind the scenes"
+                           title="Seguici su TikTok"
+                           itemscope 
+                           itemtype="https://schema.org/WebPage"
+                           itemprop="itemListElement">
+                            <meta itemprop="name" content="Mikuna TikTok">
+                            <meta itemprop="description" content="Canale TikTok di Mikuna con video della cucina peruviana">
+                            <meta itemprop="url" content="https://www.tiktok.com/@mikunaitalia">
+                            <i class="fab fa-tiktok" aria-hidden="true"></i>
                         </a>
-                        <a href="https://www.thefork.it/ristorante/mikuna-r123456" target="_blank" rel="noopener noreferrer nofollow" class="social-link" aria-label="Prenota su TheFork">
+                        
+                        <!-- TripAdvisor -->
+                        <a href="https://www.tripadvisor.it/Restaurant_Review-g12850174-d27976419-Reviews-Mikuna-Bizzozero_Varese_Province_of_Varese_Lombardy.html" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="social-link tripadvisor-link" 
+                           aria-label="Leggi le recensioni di Mikuna su TripAdvisor - Valutazioni e opinioni dei clienti"
+                           title="Recensioni su TripAdvisor"
+                           itemscope 
+                           itemtype="https://schema.org/Review"
+                           itemprop="itemListElement">
+                            <meta itemprop="name" content="Mikuna TripAdvisor Reviews">
+                            <meta itemprop="description" content="Recensioni e valutazioni di Mikuna Ristorante Peruviano su TripAdvisor">
+                            <meta itemprop="url" content="https://www.tripadvisor.it/Restaurant_Review-g12850174-d27976419-Reviews-Mikuna-Bizzozero_Varese_Province_of_Varese_Lombardy.html">
+                            <img src="loghi/tripadvisor_icon.png" alt="TripAdvisor - Recensioni Mikuna" aria-hidden="true">
+                        </a>
+                        
+                        <!-- TheFork -->
+                        <a href="https://www.thefork.it/ristorante/mikuna-r836600" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="social-link thefork-link" 
+                           aria-label="Prenota un tavolo da Mikuna su TheFork - Prenotazioni online ristorante peruviano Varese"
+                           title="Prenota su TheFork"
+                           itemscope 
+                           itemtype="https://schema.org/ReservationService"
+                           itemprop="itemListElement">
+                            <meta itemprop="name" content="Mikuna TheFork">
+                            <meta itemprop="description" content="Prenota online il tuo tavolo da Mikuna Ristorante Peruviano su TheFork">
+                            <meta itemprop="url" content="https://www.thefork.it/ristorante/mikuna-r836600">
+                            <meta itemprop="serviceType" content="Restaurant Reservation">
                             <i class="fas fa-utensils" aria-hidden="true"></i>
                         </a>
-                        <a href="https://wa.me/393758354504" target="_blank" rel="noopener" class="social-link" aria-label="Contattaci su WhatsApp">
+                        
+                        <!-- WhatsApp -->
+                        <a href="https://wa.me/393758354504?text=Ciao%20Mikuna!%20Vorrei%20prenotare%20un%20tavolo%20per%20la%20cucina%20peruviana" 
+                           target="_blank" 
+                           rel="noopener" 
+                           class="social-link whatsapp-link" 
+                           aria-label="Contattaci su WhatsApp - Prenotazioni e informazioni ristorante peruviano Mikuna Varese"
+                           title="Scrivici su WhatsApp"
+                           itemscope 
+                           itemtype="https://schema.org/ContactPoint"
+                           itemprop="itemListElement">
+                            <meta itemprop="name" content="Mikuna WhatsApp">
+                            <meta itemprop="description" content="Contatta Mikuna su WhatsApp per prenotazioni e informazioni">
+                            <meta itemprop="url" content="https://wa.me/393758354504">
+                            <meta itemprop="contactType" content="customer service">
+                            <meta itemprop="telephone" content="+393758354504">
                             <i class="fab fa-whatsapp" aria-hidden="true"></i>
                         </a>
-                        <a href="https://deliveroo.it/it/menu/milano/varese/mikuna-via-giulio-bizzozero-18?utm_medium=affiliate&utm_source=tripadvisor&TAHotelCode=637764" target="_blank" rel="noopener noreferrer nofollow" class="social-link" aria-label="Ordina su Deliveroo">
-                            <img src="loghi/deliveroo_icon.svg" alt="Deliveroo" aria-hidden="true">
+                        
+                        <!-- Deliveroo -->
+                        <a href="https://deliveroo.it/it/menu/milano/varese/mikuna-via-giulio-bizzozero-18?utm_source=mikuna-website&utm_medium=social-footer&utm_campaign=delivery-peruvian-food" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="social-link deliveroo-link" 
+                           aria-label="Ordina cibo peruviano a domicilio con Deliveroo - Delivery cucina peruviana Mikuna Varese"
+                           title="Ordina su Deliveroo"
+                           itemscope 
+                           itemtype="https://schema.org/FoodDeliveryService"
+                           itemprop="itemListElement">
+                            <meta itemprop="name" content="Mikuna Deliveroo">
+                            <meta itemprop="description" content="Ordina cibo peruviano a domicilio da Mikuna con Deliveroo">
+                            <meta itemprop="url" content="https://deliveroo.it/it/menu/milano/varese/mikuna-via-giulio-bizzozero-18">
+                            <meta itemprop="serviceType" content="Food Delivery">
+                            <meta itemprop="areaServed" content="Varese, Lombardia">
+                            <img src="loghi/deliveroo_icon.svg" alt="Deliveroo - Delivery Mikuna" aria-hidden="true">
                         </a>
                     </div>
                 </div>
