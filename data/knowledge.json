@@ -8,7 +8,7 @@
   "publisher": {
     "@type": "Restaurant",
     "name": "Mikuna",
-    "url": "https://mikuna-varese.it"
+    "url": "https://www.mikunaitalia.it"
   },
   
   "restaurant_info": {
@@ -48,7 +48,7 @@
     "contact": {
       "phone": "+393758354504",
       "email": "mikunasoto@icloud.com",
-      "website": "https://mikuna-varese.it",
+      "website": "https://www.mikunaitalia.it",
       "social_media": {
         "facebook": "https://www.facebook.com/profile.php?id=61558083482452",
         "instagram": "@mikunaitalia"
@@ -169,7 +169,7 @@
       },
       {
         "question": "How do I make a reservation?",
-        "answer": "Visit our booking page at mikuna-varese.it/prenota or call +39 375 835 4504. Online reservations send a WhatsApp message.",
+        "answer": "Visit our booking page at www.mikunaitalia.it/prenota.html or call +39 375 835 4504. Online reservations send a WhatsApp message.",
         "keywords": ["reservation", "booking", "table", "reserve"]
       },
       {

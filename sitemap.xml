@@ -10,8 +10,6 @@
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="it" href="https://www.mikunaitalia.it/" />
-        <xhtml:link rel="alternate" hreflang="es" href="https://www.mikunaitalia.it/?lang=es" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.mikunaitalia.it/?lang=en" />
         <image:image>
             <image:loc>https://www.mikunaitalia.it/images/mikuna-ceviche-hero.webp</image:loc>
             <image:title>Ceviche Peruviano - Specialità Mikuna</image:title>
@@ -26,24 +24,20 @@
     
     <!-- Chi Siamo -->
     <url>
-        <loc>https://www.mikunaitalia.it/chi-siamo</loc>
+        <loc>https://www.mikunaitalia.it/chi-siamo.html</loc>
         <lastmod>2024-12-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
-        <xhtml:link rel="alternate" hreflang="it" href="https://www.mikunaitalia.it/chi-siamo" />
-        <xhtml:link rel="alternate" hreflang="es" href="https://www.mikunaitalia.it/chi-siamo?lang=es" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.mikunaitalia.it/chi-siamo?lang=en" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://www.mikunaitalia.it/chi-siamo.html" />
     </url>
     
     <!-- Menu -->
     <url>
-        <loc>https://www.mikunaitalia.it/menu</loc>
+        <loc>https://www.mikunaitalia.it/menu.html</loc>
         <lastmod>2024-12-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="it" href="https://www.mikunaitalia.it/menu" />
-        <xhtml:link rel="alternate" hreflang="es" href="https://www.mikunaitalia.it/menu?lang=es" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.mikunaitalia.it/menu?lang=en" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://www.mikunaitalia.it/menu.html" />
         <image:image>
             <image:loc>https://www.mikunaitalia.it/images/ceviche-mixto.webp</image:loc>
             <image:title>Ceviche Mixto - Menu Mikuna</image:title>
@@ -58,30 +52,26 @@
     
     <!-- Contatti -->
     <url>
-        <loc>https://www.mikunaitalia.it/contatti</loc>
+        <loc>https://www.mikunaitalia.it/contatti.html</loc>
         <lastmod>2024-12-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
-        <xhtml:link rel="alternate" hreflang="it" href="https://www.mikunaitalia.it/contatti" />
-        <xhtml:link rel="alternate" hreflang="es" href="https://www.mikunaitalia.it/contatti?lang=es" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.mikunaitalia.it/contatti?lang=en" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://www.mikunaitalia.it/contatti.html" />
     </url>
     
     <!-- Prenota -->
     <url>
-        <loc>https://www.mikunaitalia.it/prenota</loc>
+        <loc>https://www.mikunaitalia.it/prenota.html</loc>
         <lastmod>2024-12-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
-        <xhtml:link rel="alternate" hreflang="it" href="https://www.mikunaitalia.it/prenota" />
-        <xhtml:link rel="alternate" hreflang="es" href="https://www.mikunaitalia.it/prenota?lang=es" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.mikunaitalia.it/prenota?lang=en" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://www.mikunaitalia.it/prenota.html" />
     </url>
     
     
     <!-- AI Interface -->
     <url>
-        <loc>https://www.mikunaitalia.it/ai</loc>
+        <loc>https://www.mikunaitalia.it/ai.html</loc>
         <lastmod>2024-12-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
@@ -89,11 +79,11 @@
     
     <!-- Blog Content -->
     <url>
-        <loc>https://www.mikunaitalia.it/blog/guida-cucina-peruviana-lombardia</loc>
+        <loc>https://www.mikunaitalia.it/blog/guida-cucina-peruviana-lombardia.html</loc>
         <lastmod>2024-12-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
-        <xhtml:link rel="alternate" hreflang="it" href="https://www.mikunaitalia.it/blog/guida-cucina-peruviana-lombardia" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://www.mikunaitalia.it/blog/guida-cucina-peruviana-lombardia.html" />
         <image:image>
             <image:loc>https://www.mikunaitalia.it/images/blog/cucina-peruviana-lombardia.webp</image:loc>
             <image:title>Guida alla Cucina Peruviana in Lombardia</image:title>
@@ -101,19 +91,6 @@
         </image:image>
     </url>
     
-    <!-- Data endpoints for AI -->
-    <url>
-        <loc>https://www.mikunaitalia.it/data/menu.json</loc>
-        <lastmod>2024-12-19</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-    </url>
     
-    <url>
-        <loc>https://www.mikunaitalia.it/data/knowledge.json</loc>
-        <lastmod>2024-12-19</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-    </url>
     
 </urlset> 

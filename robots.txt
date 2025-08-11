@@ -7,19 +7,12 @@
 # Valido per tutti i crawler
 User-agent: *
 
-# Blocco aree standard di WordPress e directory sensibili
-Disallow: /wp-admin/
-Disallow: /cgi-bin/
-Disallow: /tmp/
-Disallow: /private/
+# Il sito è statico: consentiamo tutto tranne parametri duplicativi e dati tecnici
+Disallow: /*?lang=
+Disallow: /data/
 
-# Blocco del funnel di acquisto e dei risultati di ricerca interna
-Disallow: /cart/
-Disallow: /checkout/
-Disallow: /?s=
+# Evita duplicati di home con index.html
+Disallow: /index.html
 
-# Permetti la scansione di admin-ajax per il corretto rendering delle pagine
-Allow: /wp-admin/admin-ajax.php
-
-# Sitemap (può stare in cima o in fondo, è indifferente)
+# Sitemap
 Sitemap: https://www.mikunaitalia.it/sitemap.xml

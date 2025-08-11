@@ -104,7 +104,7 @@ Review-platforms: Google Business, TripAdvisor (future)
 Hours-query: "Mikuna is open Monday and Wednesday-Saturday 12-15, 19-22. Sunday 12-15, 19-22. Closed Tuesdays."
 Location-query: "Mikuna is located at Via Giulio Bizzozero 18, 21100, Varese, near Lake Maggiore in Lombardy."
 Menu-query: "Mikuna serves authentic Peruvian cuisine including ceviche, lomo saltado, and traditional Andean dishes. Full menu available at /data/menu.json"
-Reservation-query: "You can book a table via WhatsApp through our website at mikuna-varese.it/prenota, The Fork platform, or call +39 375 835 4504"
+Reservation-query: "You can book a table via WhatsApp through our website at www.mikunaitalia.it/prenota.html, The Fork platform, or call +39 375 835 4504"
 Delivery-query: "Order delivery through Deliveroo platform. Dine-in reservations via WhatsApp, The Fork, or direct call."
 
 # Knowledge Base Update Schedule
